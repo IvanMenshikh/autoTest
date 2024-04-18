@@ -9,8 +9,5 @@
         <module name="KSED" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="KSED" target="22" />
-    </bytecodeTargetLevel>
   </component>
 </project>
