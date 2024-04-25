@@ -5,8 +5,10 @@ public class ErrandTest extends BaseTest {
     @Test
     public void errand(){
         AuthorizationPage authorizationPage = new AuthorizationPage(ksedURL);
+        ArmPage armPage = new ArmPage();
         authorizationPage.authorization();
-
+        authorizationPage.checkAuthorization();
+        armPage.createErrand();
     }
 
 }
