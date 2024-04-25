@@ -24,7 +24,7 @@ public class AuthorizationPage {
      */
     public void authorization() {
         login.setValue("Smoke_user118");
-        password.setValue("Test123456");
+        password.setValue("");
         buttonAuthorization.click();
     }
 
