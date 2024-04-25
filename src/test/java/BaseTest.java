@@ -11,7 +11,7 @@ public class BaseTest {
         WebDriverManager.edgedriver().setup();//Установка драйвера Edge
         Configuration.browser = "Edge";//Браузер
         Configuration.browserSize = "1920x1080";//Размер окна при запуске теста
-        //Configuration.headless = false;//Видимоть теста при запуске, обычно используют на Дженкинсе
+        Configuration.timeout = 10000;//Установка Implicit Wait на 10 секунд
     }
     @BeforeMethod //Аннотация используется для инициализации объектов, переменных или состояний перед запуском теста
     public void init(){
