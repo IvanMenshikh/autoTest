@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Data/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage_KS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ArmPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/ArmPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AuthorizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/AuthorizationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ErrandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Data/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Data/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +163,7 @@
       <workItem from="1713975440129" duration="658000" />
       <workItem from="1714066351942" duration="6022000" />
       <workItem from="1714081375482" duration="2035000" />
-      <workItem from="1714163002455" duration="7051000" />
+      <workItem from="1714163002455" duration="7224000" />
     </task>
     <servers />
   </component>

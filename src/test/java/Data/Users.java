@@ -2,7 +2,7 @@ package Data;
 
 public class Users {
     String loginUser118 = "Smoke_user118";
-    String passwordUser118 = "Test123456";
+    String passwordUser118 = "";
 
     public String getLoginUser118(){
         return loginUser118;
