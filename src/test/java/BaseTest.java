@@ -8,8 +8,8 @@ import org.testng.annotations.BeforeMethod;
  */
 public class BaseTest {
     public void setUp(){
-        WebDriverManager.edgedriver().setup();//Установка драйвера Edge
-        Configuration.browser = "Edge";//Браузер
+        WebDriverManager.firefoxdriver().setup();//Установка драйвера fireFox
+        Configuration.browser = "FireFox";//Браузер
         Configuration.browserSize = "1920x1080";//Размер окна при запуске теста
         Configuration.timeout = 10000;//Установка Implicit Wait на 10 секунд
     }
