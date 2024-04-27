@@ -10,7 +10,6 @@ public class CreationFormPage_KS {
     private SelenideElement documentTypeOther;//Вид документа -> Прочее (3 точки)
     private SelenideElement documentTypeOtherApplication;//Вид документа -> Прочее -> Акт (3 точки)
     private SelenideElement buttonOk;//Кнопка Ок
-
     private SelenideElement titleKs;//Заголовок
     private SelenideElement documentCategory;//Категория документа
 
@@ -54,12 +53,12 @@ public class CreationFormPage_KS {
 
     public void ks(){
         getDocumentType().click();
-        getDocumentTypeCollectionOther().click();
         //Не работает
+        //getDocumentTypeCollectionOther().click();
         //getDocumentTypeOtherApplication().click();
         //getButtonOk().click();
         getTitleKs().setValue("Тестовый документ");
-        sleep(3000);
+        sleep(1000);
     }
 
 }

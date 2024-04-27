@@ -71,6 +71,6 @@ public class AuthorizationPage {
     public void checkAuthorization(){
         String armTitle = getCheckHomeTitle().getText();
         Assert.assertEquals(armTitle, "АРМ СЭД");
-        System.out.println(armTitle);
+        System.out.println("Титул КСЭД - " + armTitle + " авторизация прошла успешно");
     }
 }
