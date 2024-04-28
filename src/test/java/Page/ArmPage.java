@@ -3,7 +3,6 @@ package Page;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class ArmPage {
 
@@ -32,15 +31,14 @@ public class ArmPage {
     /**
      * Открываем форму создания КС
      */
-    public void createKS(){
+    public void createFormKS(){
         getButtonCreate().click();
         getButtonDocTypeKS().click();
-        sleep(3000);//Останавливаем код для просмотра конечного результата
     }
     /**
      * Открываем форму создания Поручения
      */
-    public void createErrand(){
+    public void createFormErrand(){
         getButtonCreate().click();
         getButtonDocTypeErrand().click();
     }

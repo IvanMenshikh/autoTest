@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Data/BaseFormDoc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Data/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Data/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/ArmPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/ArmPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Page/AuthorizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/AuthorizationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage_KS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage_KS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +172,8 @@
       <workItem from="1714081375482" duration="2035000" />
       <workItem from="1714163002455" duration="7617000" />
       <workItem from="1714171017006" duration="280000" />
-      <workItem from="1714214614803" duration="2897000" />
+      <workItem from="1714214614803" duration="3041000" />
+      <workItem from="1714294095556" duration="8445000" />
     </task>
     <servers />
   </component>

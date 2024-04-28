@@ -11,12 +11,10 @@ public class CreationFormPage_KS {
     private SelenideElement documentTypeOtherApplication;//Вид документа -> Прочее -> Акт (3 точки)
     private SelenideElement buttonOk;//Кнопка Ок
     private SelenideElement titleKs;//Заголовок
-    private SelenideElement documentCategory;//Категория документа
-
 
     private SelenideElement getDocumentType(){
         if(documentType == null){
-            documentType = $x("//button[@id = 'template_x002e_content_x002e_document-create_x0023_default_assoc_rn-document-approval_document-kind-assoc-cntrl-tree-picker-button-button']");
+            documentType = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree-picker-button-button')]");
         }
         return documentType;
     }
@@ -26,12 +24,6 @@ public class CreationFormPage_KS {
         }
         return titleKs;
     }
-    private SelenideElement getDocumentCategory(){
-        if(documentCategory == null){
-            documentCategory = $x("//button[@id = 'template_x002e_content_x002e_document-create_x0023_default_assoc_lecm-eds-aspect_document-category-assoc-cntrl-tree-picker-button-button']");
-        }
-        return documentCategory;
-    }
     private SelenideElement getDocumentTypeCollectionOther(){
         if(documentTypeOther == null){
             documentTypeOther = $x("//span[text() = 'Прочие']");
@@ -40,25 +32,44 @@ public class CreationFormPage_KS {
     }
     private SelenideElement getDocumentTypeOtherApplication(){
         if(documentTypeOtherApplication == null){
-            documentTypeOtherApplication = $x("");//Доработать !!!
+            documentTypeOtherApplication = $x("//a[contains(@id, 'alf-id2') and @title='Добавить']");
         }
         return documentTypeOtherApplication;
     }
     private SelenideElement getButtonOk(){
         if(buttonOk == null){
-            buttonOk = $x("");//Доработать !!!
+            buttonOk = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok-button') and text() = 'OK']");//Доработать !!!
         }
         return buttonOk;
     }
 
-    public void ks(){
+//Ожидание когда элементы станут активные(enabled) и видимые(visible)
+//Используем shouldBe для проверки состояния элементов
+
+//    public void waitForClick() {
+//        getDocumentType().shouldBe(Condition.visible);//.shouldBe(Condition.enabled);
+//        getDocumentTypeCollectionOther().shouldBe(Condition.visible);//.shouldBe(Condition.enabled);
+//        getDocumentTypeOtherApplication().shouldBe(Condition.visible);//.shouldBe(Condition.enabled);
+//    }
+
+// JavaScript для клика - Использование более надежных стратегий клика
+
+//    public void clickDocumentType() {
+//        Selenide.executeJavaScript("arguments[0].click();", getDocumentType());
+//    }
+
+    public void createKs(){
+        Data.BaseFormDoc pasteBaseFormDoc = new Data.BaseFormDoc();
+        //waitForClick();
+        //clickDocumentType();
         getDocumentType().click();
-        //Не работает
-        //getDocumentTypeCollectionOther().click();
-        //getDocumentTypeOtherApplication().click();
-        //getButtonOk().click();
+        getDocumentType().click();
+        getDocumentTypeCollectionOther().click();
+        getDocumentTypeOtherApplication().click();
+        getButtonOk().click();
         getTitleKs().setValue("Тестовый документ");
-        sleep(1000);
+        pasteBaseFormDoc.pasteBaseFormDoc();//                 Доработать!!!
+        sleep(2000);
     }
 
 }

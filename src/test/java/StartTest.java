@@ -1,3 +1,4 @@
+import Data.Users;
 import Page.CreationFormPage_KS;
 import org.testng.annotations.Test;
 
@@ -8,11 +9,11 @@ public class StartTest extends BaseTest {
         Page.AuthorizationPage authorizationPage = new Page.AuthorizationPage(ksedURL);
         Page.ArmPage armPage = new Page.ArmPage();
         Page.CreationFormPage_KS ks = new CreationFormPage_KS();
-        authorizationPage.authorization();
+        Data.Users user = new Users();
+        authorizationPage.authorization(user.getLoginUser118(), user.getPasswordUser118());
         authorizationPage.checkAuthorization();
-        armPage.createKS();
-        ks.ks();
-
+        armPage.createFormKS();
+        ks.createKs();
     }
 
 }

@@ -11,7 +11,7 @@ public class BaseTest {
         WebDriverManager.firefoxdriver().setup();//Установка драйвера fireFox
         Configuration.browser = "FireFox";//Браузер
         Configuration.browserSize = "1920x1080";//Размер окна при запуске теста
-        Configuration.timeout = 120000;//Установка Implicit Wait на 2 минуты
+        Configuration.timeout = 10000;//Установка Implicit Wait на 2 минуты
     }
     @BeforeMethod //Аннотация используется для инициализации объектов, переменных или состояний перед запуском теста
     public void init(){

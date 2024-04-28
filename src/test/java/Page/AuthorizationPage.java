@@ -3,7 +3,7 @@ package Page;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.Assert;
-import Data.Users;
+
 import static com.codeborne.selenide.Selenide.$x;
 
 
@@ -58,10 +58,9 @@ public class AuthorizationPage {
      * Авторизация с заполнением полей и нажатием на кнопку "Войти".
      */
 
-    Data.Users user = new Users();
-    public void authorization() {
-        getLogin().setValue(user.getLoginUser118());
-        getPassword().setValue(user.getPasswordUser118());
+    public void authorization(String login, String password) {
+        getLogin().setValue(login);
+        getPassword().setValue(password);
         getButtonAuthorization().click();
     }
 
