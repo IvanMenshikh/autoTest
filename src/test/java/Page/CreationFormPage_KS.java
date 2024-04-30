@@ -1,6 +1,5 @@
 package Page;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.awaitility.Awaitility;
 import org.awaitility.core.ConditionFactory;
@@ -52,11 +51,11 @@ public class CreationFormPage_KS {
 //Ожидание когда элементы станут активные(enabled) и видимые(visible)
 //Используем shouldBe для проверки состояния элементов
 
-    public void waitForClick() {
-        //getDocumentType().shouldBe(Condition.visible).shouldBe(Condition.enabled);
-        getDocumentTypeCollectionOther().shouldBe(Condition.enabled);
-        //getDocumentTypeOtherApplication().shouldBe(Condition.visible).shouldBe(Condition.enabled);
-    }
+//    public void waitForClick() {
+//        //getDocumentType().shouldBe(Condition.visible).shouldBe(Condition.enabled);
+//        getDocumentTypeCollectionOther().shouldBe(Condition.enabled);
+//        //getDocumentTypeOtherApplication().shouldBe(Condition.visible).shouldBe(Condition.enabled);
+//    }
 
 // JavaScript для клика - Использование более надежных стратегий клика
 

@@ -12,7 +12,7 @@ public class Users {
     }
     public  String getPasswordUser118(){
         if(passwordUser118 == null){
-            passwordUser118 = "Test123456";
+            passwordUser118 = "";
         }
         return passwordUser118;
     }
