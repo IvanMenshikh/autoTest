@@ -9,6 +9,14 @@ public class BaseFormDoc {
     private SelenideElement selectDvpCategory;//Категория документа -> ДВП
     private SelenideElement buttonOk;//Кнопка Ок
 
+    //Кнопка отмены на форме создания документа
+//    private SelenideElement otmena;
+//    private SelenideElement getOtmena(){
+//        if(otmena == null){
+//            otmena = $x("//button[contains(@id, 'default-form-cancel-button')]");
+//        }
+//        return otmena;
+//    }
 
     private SelenideElement getDocumentCategory(){
         if(documentCategory == null){

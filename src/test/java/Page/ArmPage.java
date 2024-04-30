@@ -9,6 +9,9 @@ public class ArmPage {
     private SelenideElement buttonCreate;
     private SelenideElement buttonDocTypeKS;
     private SelenideElement buttonDocTypeErrand;
+    private SelenideElement userMenu;
+    private SelenideElement exitButton;
+
 
     private SelenideElement getButtonCreate(){
         if(buttonCreate == null){
@@ -28,6 +31,18 @@ public class ArmPage {
         }
         return buttonDocTypeErrand;
     }
+    private SelenideElement getUserMenu(){
+        if(userMenu == null){
+            userMenu = $x("//span[contains(@id,'USER_MENU')]");
+        }
+        return userMenu;
+    }
+    private SelenideElement getExitButton(){
+        if(exitButton == null){
+            exitButton = $x("//td[text()='Выход']");
+        }
+        return exitButton;
+    }
 
     public SelenideElement typeDoc(String type) {
     switch (type) {
@@ -46,4 +61,10 @@ public class ArmPage {
         getButtonCreate().click();
         typeDoc(type).click();
     }
+    public void exitOnAuthorizationPage(){
+    getUserMenu().click();
+    getExitButton().click();
+    }
 }
+
+

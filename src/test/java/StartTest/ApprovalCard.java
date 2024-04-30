@@ -16,6 +16,7 @@ public class ApprovalCard extends BaseTest {
         authorizationPage.checkAuthorization();
         armPage.createForm("Карточка согласования");
         ks.createKs();
+        //armPage.exitOnAuthorizationPage();
     }
 
 }

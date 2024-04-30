@@ -79,7 +79,7 @@ public class CreationFormPage_KS {
         getDocumentTypeOtherApplication().click();
         getButtonOk().click();
         getTitleKs().setValue("Тестовый документ");
-        pasteBaseFormDoc.pasteBaseFormDoc();
+        pasteBaseFormDoc.pasteBaseFormDoc();// доработать!
         sleep(2000);
     }
 

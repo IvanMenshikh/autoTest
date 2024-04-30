@@ -15,7 +15,7 @@ public class BaseTest {
         Configuration.browser = "FireFox";//Браузер
         Configuration.browserSize = "1920x1080";//Размер окна при запуске теста
         Configuration.timeout = 30000;//Установка Implicit Wait на 3 минуты
-        Selenide.open("http://172.30.48.40:8080/share/page");
+        //Selenide.open("http://172.30.48.40:8080/share/page");
     }
     @BeforeMethod //Аннотация используется для инициализации объектов, переменных или состояний перед запуском теста
     public void init(){
