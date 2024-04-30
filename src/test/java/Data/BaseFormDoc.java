@@ -3,7 +3,6 @@ package Data;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class BaseFormDoc {
     private SelenideElement documentCategory;//Категория документа
@@ -19,13 +18,13 @@ public class BaseFormDoc {
     }
     private SelenideElement getSelectDvpCategory(){
         if(selectDvpCategory == null){
-            selectDvpCategory = $x("//a[contains(@id, 'alf-id41') and @title='Добавить']");
+            selectDvpCategory = $x("//a[contains(@id, 'alf-id1')]");
         }
         return selectDvpCategory;
     }
     private SelenideElement getButtonOk(){
         if(buttonOk == null){
-            buttonOk = $x("//button[contains(@id, 'category-assoc-cntrl-ok-button') and text() = 'OK']");//Доработать !!!
+            buttonOk = $x("//button[contains(@id, 'category-assoc-cntrl-ok-button') and text() = 'OK']");
         }
         return buttonOk;
     }

@@ -28,20 +28,22 @@ public class ArmPage {
         }
         return buttonDocTypeErrand;
     }
-    /**
-     * Открываем форму создания КС
-     */
-    public void createFormKS(){
-        getButtonCreate().click();
-        getButtonDocTypeKS().click();
-    }
-    /**
-     * Открываем форму создания Поручения
-     */
-    public void createFormErrand(){
-        getButtonCreate().click();
-        getButtonDocTypeErrand().click();
-    }
 
-
+    public SelenideElement typeDoc(String type) {
+    switch (type) {
+        case "Карточка согласования":
+            return getButtonDocTypeKS();
+        case "Поручение":
+            return getButtonDocTypeErrand();
+        default:
+            throw new IllegalArgumentException("Неверный тип документа: " + type);
+    }
+}
+    /**
+     * Открываем форму создания по типу документа
+     */
+    public void createForm(String type){
+        getButtonCreate().click();
+        typeDoc(type).click();
+    }
 }

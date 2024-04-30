@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Data/BaseFormDoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StartTest/ApprovalCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Data/BaseFormDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Data/BaseFormDoc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Data/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Data/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Page/ArmPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/ArmPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Page/AuthorizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/AuthorizationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage_KS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage_KS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest/ErrandCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,38 +47,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ErrandTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.AuthorizationCase.authorization.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.CreateDocCase.authorization.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrandTest.errand.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StartTest.errand.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StartTest.startTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin-PC/IdeaProjects/KSED&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Admin-PC/IdeaProjects/KSED/src/main/java/org/example/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ErrandTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.ApprovalCard.startTest.executor": "Run",
+    "TestNG.AuthorizationCase.authorization.executor": "Run",
+    "TestNG.CreateDocCase.authorization.executor": "Run",
+    "TestNG.ErrandTest.errand.executor": "Run",
+    "TestNG.StartTest.errand.executor": "Run",
+    "TestNG.StartTest.startTest.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin-PC/IdeaProjects/KSED",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Admin-PC/IdeaProjects/KSED/src/main/java/org/example/Main.java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin-PC\IdeaProjects\KSED" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="StartTest" />
       <recent name="Data" />
       <recent name="Page" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.StartTest.startTest">
+  <component name="RunManager" selected="TestNG.ApprovalCard.startTest">
     <configuration name="ErrandTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ErrandTest" />
       <module name="KSED" />
@@ -86,11 +89,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateDocCase.authorization" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ApprovalCard.startTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="KSED" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateDocCase" />
-      <option name="METHOD_NAME" value="authorization" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StartTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="StartTest" />
+      <option name="MAIN_CLASS_NAME" value="StartTest.ApprovalCard" />
+      <option name="METHOD_NAME" value="startTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -136,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ApprovalCard.startTest" />
         <item itemvalue="TestNG.StartTest.startTest" />
         <item itemvalue="TestNG.StartTest.errand" />
         <item itemvalue="TestNG.ErrandTest.errand" />
         <item itemvalue="Application.ErrandTest" />
-        <item itemvalue="TestNG.CreateDocCase.authorization" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +182,10 @@
       <workItem from="1714163002455" duration="7617000" />
       <workItem from="1714171017006" duration="280000" />
       <workItem from="1714214614803" duration="3041000" />
-      <workItem from="1714294095556" duration="8445000" />
+      <workItem from="1714294095556" duration="8819000" />
+      <workItem from="1714315206524" duration="31000" />
+      <workItem from="1714340949040" duration="14000" />
+      <workItem from="1714466571323" duration="7967000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,10 @@
+package StartTest;
+
 import Data.Users;
 import Page.CreationFormPage_KS;
 import org.testng.annotations.Test;
 
-public class StartTest extends BaseTest {
+public class ApprovalCard extends BaseTest {
     private final static String ksedURL = "http://172.30.48.40:8080/share/page";
     @Test
     public void startTest(){
@@ -12,7 +14,7 @@ public class StartTest extends BaseTest {
         Data.Users user = new Users();
         authorizationPage.authorization(user.getLoginUser118(), user.getPasswordUser118());
         authorizationPage.checkAuthorization();
-        armPage.createFormKS();
+        armPage.createForm("Карточка согласования");
         ks.createKs();
     }
 
