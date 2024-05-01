@@ -20,19 +20,19 @@ public class BaseFormDoc {
 
     private SelenideElement getDocumentCategory(){
         if(documentCategory == null){
-            documentCategory = $x("//button[contains(@id, 'category-assoc-cntrl-tree-picker-button-button')]");
+            documentCategory = $x("//button[contains(@id, 'category') and text() = '...']");
         }
         return documentCategory;
     }
     private SelenideElement getSelectDvpCategory(){
         if(selectDvpCategory == null){
-            selectDvpCategory = $x("//a[contains(@id, 'alf-id1')]");
+            selectDvpCategory = $x("//a[@id = 'alf-id2'][contains(@class, 'category')]");
         }
         return selectDvpCategory;
     }
     private SelenideElement getButtonOk(){
         if(buttonOk == null){
-            buttonOk = $x("//button[contains(@id, 'category-assoc-cntrl-ok-button') and text() = 'OK']");
+            buttonOk = $x("//button[contains(@id, 'category') and text() = 'OK']");
         }
         return buttonOk;
     }

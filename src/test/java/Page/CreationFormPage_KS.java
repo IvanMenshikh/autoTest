@@ -1,12 +1,7 @@
 package Page;
 
 import com.codeborne.selenide.SelenideElement;
-import org.awaitility.Awaitility;
-import org.awaitility.core.ConditionFactory;
 
-import java.util.concurrent.TimeUnit;
-
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.sleep;
 
@@ -19,7 +14,7 @@ public class CreationFormPage_KS {
 
     private SelenideElement getDocumentType(){
         if(documentType == null){
-            documentType = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree-picker-button-button')]");
+            documentType = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
         }
         return documentType;
     }
@@ -37,13 +32,13 @@ public class CreationFormPage_KS {
     }
     private SelenideElement getDocumentTypeOtherApplication(){
         if(documentTypeOtherApplication == null){
-            documentTypeOtherApplication = $x("//a[contains(@id, 'alf-id2') and @title='Добавить']");
+            documentTypeOtherApplication = $x("//a[@id = 'alf-id2'][contains(@class, 'cntrlyui')]");
         }
         return documentTypeOtherApplication;
     }
     private SelenideElement getButtonOk(){
         if(buttonOk == null){
-            buttonOk = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok-button') and text() = 'OK']");
+            buttonOk = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok')]");
         }
         return buttonOk;
     }
@@ -63,16 +58,11 @@ public class CreationFormPage_KS {
 //        Selenide.executeJavaScript("arguments[0].click();", getDocumentType());
 //    }
 
-    public void pageLoadChecker(){
-        ConditionFactory await = Awaitility.await().atMost(15, TimeUnit.SECONDS);
-        await.until(() -> $x("//div[text() = 'lnd-kind-assoc-cntrl-picker_c']").is(visible));
-        await.until(() -> $x("//div[text() = 'Элементы не найдены']").is(visible));
-    }
-
     public void createKs(){
         Data.BaseFormDoc pasteBaseFormDoc = new Data.BaseFormDoc();
-        getDocumentType().click();
         //pageLoadChecker();
+        sleep(100);
+        getDocumentType().click();
         //waitForClick();
         getDocumentTypeCollectionOther().click();
         getDocumentTypeCollectionOther().click();
