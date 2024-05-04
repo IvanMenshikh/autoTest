@@ -28,7 +28,7 @@ public class Users {
 
     // Статический блок для инициализации коллекции.
     static {
-        usersMap.put("Смокин_1", new Users("Смокин_1", "Smoke_user118", "Test123456"));
+        usersMap.put("Смокин_1", new Users("Смокин_1", "Smoke_user118", ""));
         // Для добавления копируем UsersMap и создаем по подобию второго пользователя
     }
 
