@@ -1,9 +1,11 @@
 package Tools;
 
+import Page.CreationFormPage;
 import Page.MainPage;
 import com.codeborne.selenide.SelenideElement;
-import Page.CreationFormPage_KS;
-import Object.BaseFormDoc;
+
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class CreateDocHelper {
@@ -20,20 +22,32 @@ public class CreateDocHelper {
         }
     }
 
-    // Открываем форму создания по выбранному типу(String type) документа.
-    public static void createFormDoc(String type){
+    // Создаем документ по выбранному типу.
+    public static void createDoc(String type){
         MainPage.getButtonCreate().click();
         typeDoc(type).click();
     }
 
+    // Вид документа, выбираем вид и элемент вида.
+    public static void catalogDoc(String catalog, String el){
+        CreationFormPage.getDocumentTypeCatalog(catalog).click();
+        CreationFormPage.getDocumentTypeCatalogElement(el).click();
+    }
+
+    public static void setBaseFormDoc(String type){
+        CreationFormPage.getDocumentCategory().click();
+        CreationFormPage.getSelectCategory(type).click();
+        CreationFormPage.getButtonOk_Category().click();
+    }
+
     // Создаем документ, вид "Карточка согласования".
     public static void createApprovalCard(){
-        CreationFormPage_KS.getDocumentType().click();
-        CreationFormPage_KS.getDocumentTypeCatalog("Прочее").click();
-        CreationFormPage_KS.getDocumentTypeCatalogElement("Акт").click();
-        CreationFormPage_KS.getButtonOk().click();
-        CreationFormPage_KS.getTitleKs().setValue("Тестовый документ");
-        BaseFormDoc.setBaseFormDoc();
+        $x("//legend[text() = 'Документы для информации']").shouldBe(visible);
+        CreationFormPage.getDocumentType().click();
+        catalogDoc("Прочие", "Акт");
+        CreationFormPage.getButtonOk_DocType().click();
+        CreationFormPage.getTitleKs().setValue("Тестовый документ");
+        setBaseFormDoc("Открытый");
         sleep(2000);
     }
 }

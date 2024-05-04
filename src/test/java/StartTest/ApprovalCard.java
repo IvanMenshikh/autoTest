@@ -9,7 +9,7 @@ public class ApprovalCard extends BaseTest {
 
         Tools.AuthHelper.authorization("Смокин_1");
         Tools.Asserts.checkAuth();
-        Tools.CreateDocHelper.createFormDoc("Карточка согласования");
+        Tools.CreateDocHelper.createDoc("Карточка согласования");
         Tools.CreateDocHelper.createApprovalCard();
 
     }
