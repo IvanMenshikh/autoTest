@@ -9,27 +9,14 @@ import static com.codeborne.selenide.Selenide.$x;
 public class LoginPage {
 
     // Поле "Логин".
-    private SelenideElement fieldUser = $x("//input[@name = 'username']");
+    @Getter
+    public static SelenideElement fieldUser = $x("//input[@name = 'username']");
 
     // Поле "Пароль".
-    private SelenideElement fieldPassword = $x("//input[@name = 'password']");
+    @Getter
+    public static SelenideElement fieldPassword = $x("//input[@name = 'password']");
 
     // Поле "Войти".
-    private SelenideElement submit = $x("//button[text() = 'Войти']");
-
-
-//    // Поле "Логин".
-//    public static SelenideElement getFieldUser(){
-//        return $x("//input[@name = 'username']");
-//    }
-//
-//    // Поле "Пароль".
-//    public static SelenideElement getFieldPassword(){
-//        return $x("//input[@name = 'password']");
-//    }
-//
-//    // Поле "Войти".
-//    public static SelenideElement getFieldButtonSubmit(){
-//        return $x("//button[text() = 'Войти']");
-//    }
+    @Getter
+    public static SelenideElement submit = $x("//button[text() = 'Войти']");
 }
