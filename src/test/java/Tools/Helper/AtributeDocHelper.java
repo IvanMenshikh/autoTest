@@ -5,16 +5,26 @@ import Page.CreationFormPage;
 public class AtributeDocHelper {
 
     // Вид документа, выбираем вид и элемент вида.
-    public static void docType_catalog(String catalog, String el){
+    public void docType_catalog(String catalog, String el){
         CreationFormPage.getDocumentTypeCatalog(catalog).click();
         CreationFormPage.getDocumentTypeCatalogElement(el).click();
     }
 
     //Категория документа "Открытый", "ДВП", "СКХ".
-    public static void docCategory(String type){
-        CreationFormPage.getDocumentCategory().click();
+    public void docCategory(String type){
+        CreationFormPage.getDocCategory().click();
         CreationFormPage.getSelectCategory(type).click();
         CreationFormPage.getButtonOkCategory().click();
+    }
+
+    public void createApprovalRoute(String type, String catalog){
+        CreationFormPage.getButtonCreateRoute().click();
+        CreationFormPage.getRouteType(type).click();
+        CreationFormPage.getButtonConfirmationCreateRoute().click();
+        CreationFormPage.getButtonAddStage().click();
+        CreationFormPage.getButtonAddStageType().click();
+        CreationFormPage.getStageTypeCatalog(catalog).click();
+        CreationFormPage.getButtonConfirmationStageType().click();
     }
 
 }

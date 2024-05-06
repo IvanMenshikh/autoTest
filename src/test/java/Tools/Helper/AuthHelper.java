@@ -17,6 +17,17 @@ public class AuthHelper {
         LoginPage.getFieldUser().setValue(user.getLogin());
         LoginPage.getFieldPassword().setValue(user.getPassword());
         LoginPage.getSubmit().click();
+        Tools.Asserts.checkAuth();
+    }
+
+    public static void negativeAuthorization(String name){
+
+        Users user = Employees.getUserByName(name);
+
+        LoginPage.getFieldUser().setValue(user.getLogin());
+        LoginPage.getFieldPassword().setValue(user.getPassword());
+        LoginPage.getSubmit().click();
+        Tools.Asserts.checkNegativeAuth();
     }
 
     // Выход из MainPage в LoginPage.

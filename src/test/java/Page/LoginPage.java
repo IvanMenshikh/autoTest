@@ -19,4 +19,8 @@ public class LoginPage {
     // Поле "Войти".
     @Getter
     public static SelenideElement submit = $x("//button[text() = 'Войти']");
+
+    // Модалка "Ваши данные неверны ... ".
+    @Getter
+    public static SelenideElement messageErrorAuth = $x("//div[text() = 'Ваши данные аутентификации неверны, или сайт Alfresco в данный момент недоступен.']");
 }

@@ -9,10 +9,12 @@ public class ApprovalCard extends BaseTest {
     @Test
     public void startTest(){
 
-        AuthHelper.authorization("Автор_КарточкиСогласования");
-        Tools.Asserts.checkAuth();
-        CreateDocHelper.createDoc("Карточка согласования");
-        CreateDocHelper.createApprovalCard();
+        CreateDocHelper createDocHelper = new CreateDocHelper();
+
+
+        AuthHelper.authorization("Автор_КарточкаСогласования");
+        createDocHelper.createDoc("Карточка согласования");
+        createDocHelper.createApprovalCard();
 
     }
 
