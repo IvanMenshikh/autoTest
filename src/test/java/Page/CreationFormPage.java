@@ -4,27 +4,22 @@ import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 
 import static com.codeborne.selenide.Selenide.$x;
-
+@Getter
 public class CreationFormPage {
 
     // Вид документа.
-    @Getter
     private SelenideElement documentType = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
 
     // Категория документа.
-    @Getter
     private SelenideElement documentCategory = $x("//button[contains(@id, 'category') and text() = '...']");
 
     // Кнопка "ОК" в модалке "Вид документа".
-    @Getter
     private SelenideElement buttonOkDocType = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok')]");
 
     // Кнопка "ОК" в модалке "Категория документа".
-    @Getter
     private SelenideElement buttonOkCategory = $x("//button[contains(@id, 'category') and text() = 'OK']");
 
     // Поле "Заголовок" в форме создания КС.
-    @Getter
     private SelenideElement titleApprovalCard = $x("//input[@name = 'prop_lecm-document_title']");
 
     // Вид документа -> Каталог
