@@ -1,8 +1,12 @@
 package Object;
+
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.Map;
-
+@Getter
 public class Users {
+
     private String login;
     private String password;
     private String name;
@@ -11,16 +15,6 @@ public class Users {
         this.name = name;
         this.login = login;
         this.password = password;
-    }
-
-    public String getName(){
-        return name;
-    }
-    public  String getLogin(){
-        return login;
-    }
-    public String getPassword(){
-        return password;
     }
 
     // Статическая коллекция для хранения всех пользователей.

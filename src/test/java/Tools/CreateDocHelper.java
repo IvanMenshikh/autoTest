@@ -10,44 +10,48 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class CreateDocHelper {
 
+    CreationFormPage creationFormPage = new CreationFormPage();
+    MainPage mainPage = new MainPage();
+
     // Метод для выбора типа документа по имени.
-    public static SelenideElement typeDoc(String type) {
+    public SelenideElement typeDoc(String type) {
         switch (type) {
             case "Карточка согласования":
-                return MainPage.getButtonDocTypeKS();
+                return mainPage.getButtonDocTypeApprovalCard();
             case "Поручение":
-                return MainPage.getButtonDocTypeErrand();
+                return mainPage.getButtonDocTypeErrand();
             default:
                 throw new IllegalArgumentException("Неверный тип документа: " + type);
         }
     }
 
     // Создаем документ по выбранному типу.
-    public static void createDoc(String type){
-        MainPage.getButtonCreate().click();
+    public void createDoc(String type){
+        mainPage.getButtonCreate().click();
         typeDoc(type).click();
     }
 
     // Вид документа, выбираем вид и элемент вида.
-    public static void catalogDoc(String catalog, String el){
-        CreationFormPage.getDocumentTypeCatalog(catalog).click();
-        CreationFormPage.getDocumentTypeCatalogElement(el).click();
+    public void typeDocument_catalogDoc(String catalog, String el){
+        creationFormPage.getDocumentTypeCatalog(catalog).click();
+        creationFormPage.getDocumentTypeCatalogElement(el).click();
     }
 
-    public static void setBaseFormDoc(String type){
-        CreationFormPage.getDocumentCategory().click();
-        CreationFormPage.getSelectCategory(type).click();
-        CreationFormPage.getButtonOk_Category().click();
+    //Категория документа "Открытый", "ДВП", "СКХ".
+    public void categoryFormDoc(String type){
+        creationFormPage.getDocumentCategory().click();
+        creationFormPage.getSelectCategory(type).click();
+        creationFormPage.getButtonOkCategory().click();
     }
 
     // Создаем документ, вид "Карточка согласования".
-    public static void createApprovalCard(){
+    public void createApprovalCard(){
         $x("//legend[text() = 'Документы для информации']").shouldBe(visible);
-        CreationFormPage.getDocumentType().click();
-        catalogDoc("Прочие", "Акт");
-        CreationFormPage.getButtonOk_DocType().click();
-        CreationFormPage.getTitleKs().setValue("Тестовый документ");
-        setBaseFormDoc("Открытый");
+        creationFormPage.getDocumentType().click();
+        typeDocument_catalogDoc("Прочие", "Акт");
+        creationFormPage.getButtonOkDocType().click();
+        creationFormPage.getTitleApprovalCard().setValue("Тестовый документ");
+        categoryFormDoc("Открытый");
         sleep(2000);
     }
 }
