@@ -12,6 +12,7 @@ public class ApprovalCard extends BaseTest {
 
         CreateDocHelper createDocHelper = new CreateDocHelper();
 
+        //AuthHelper.negativeAuthorization(Users.author_ApprovalCard); // Негативная авторизация
         AuthHelper.authorization(Users.author_ApprovalCard);
         createDocHelper.createDoc("Карточка согласования");
         createDocHelper.createApprovalCard();

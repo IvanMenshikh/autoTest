@@ -2,6 +2,7 @@ package Tools.Helper;
 
 import Page.CreationFormPage;
 import Page.MainPage;
+import Tools.Asserts;
 
 import java.io.File;
 
@@ -21,6 +22,7 @@ public class CreateDocHelper {
     // Создаем документ, вид "Карточка согласования".
     public void createApprovalCard(){
         CreationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
+        Asserts.checkDocTitle("Карточка согласования");
         CreationFormPage.getDoc_TypeApprovalCard().click();
         atributeDocHelper.docType_catalog("Прочие", "Акт");
         CreationFormPage.getDoc_ButtonOkDocType().click();

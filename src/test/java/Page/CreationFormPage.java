@@ -104,4 +104,9 @@ public class CreationFormPage {
     public static SelenideElement getCategoryDoc_SelectCategory(String category) {
         return $x("//span[text()='" + category + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
     }
+
+    // Титульник "Создать документ " + Тип документа + ". Проверка.
+    public static SelenideElement getDoc_CheckDocTitle(String docType){
+        return $x("//span[text() = 'Создать документ \"" + docType + "\"']");
+    }
 }

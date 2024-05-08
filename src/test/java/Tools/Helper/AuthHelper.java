@@ -3,6 +3,9 @@ package Tools.Helper;
 import Object.Employees;
 import Page.LoginPage;
 import Page.MainPage;
+import Tools.Asserts;
+
+import static com.codeborne.selenide.Condition.visible;
 
 public class AuthHelper {
 
@@ -11,7 +14,7 @@ public class AuthHelper {
         LoginPage.getFieldUser().setValue(user.getLogin());
         LoginPage.getFieldPassword().setValue(user.getPassword());
         LoginPage.getSubmit().click();
-        Tools.Asserts.checkAuth();
+        Asserts.checkAuth();
     }
 
     // Проверка негативной авторизации с ошибкой.
@@ -19,7 +22,8 @@ public class AuthHelper {
         LoginPage.getFieldUser().setValue(user.getLogin());
         LoginPage.getFieldPassword().setValue(user.getPassword());
         LoginPage.getSubmit().click();
-        Tools.Asserts.checkNegativeAuth();
+        LoginPage.getAuthErrorMessage().shouldBe(visible);
+        Asserts.checkNegativeAuth();
     }
 
     // Выход из MainPage в LoginPage.
