@@ -5,13 +5,13 @@ import lombok.Getter;
 public class Employees {
 
     private String name;
-    private String surename;
+    private String surname;
     private String login;
     private String password;
 
-    public Employees(String name, String surename, String login, String password){
+    public Employees(String name, String surname, String login, String password){
         this.name = name;
-        this.surename = surename;
+        this.surname = surname;
         this.login = login;
         this.password = password;
     }

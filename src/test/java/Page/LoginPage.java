@@ -22,5 +22,5 @@ public class LoginPage {
 
     // Модалка "Ваши данные неверны ... ".
     @Getter
-    public static SelenideElement messageErrorAuth = $x("//div[text() = 'Ваши данные аутентификации неверны, или сайт Alfresco в данный момент недоступен.']");
+    public static SelenideElement authErrorMessage = $x("//div[text() = 'Ваши данные аутентификации неверны, или сайт Alfresco в данный момент недоступен.']");
 }

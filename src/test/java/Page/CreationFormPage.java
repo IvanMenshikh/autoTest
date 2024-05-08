@@ -9,7 +9,7 @@ public class CreationFormPage {
 
     // Вид документа.
     @Getter
-    public static SelenideElement doc_TypeDoc = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
+    public static SelenideElement doc_TypeApprovalCard = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
 
     // Категория документа.
     @Getter
@@ -77,27 +77,27 @@ public class CreationFormPage {
 
 
     // Вид этапа -> выбрать элемент справочника.
-    public static SelenideElement getStageTypeCatalog(String catalog){
-        return $x("//span[text()='" + catalog + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
+    public static SelenideElement getStage_SelectStageType(String stageType){
+        return $x("//span[text()='" + stageType + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
     }
 
-    // Тип маршрута согласования "Индивидуальный маршрут", "Типовой".
-    public static SelenideElement getRouteType(String type){
-        return $x("//a[text()='" + type + "']");
+    // Выбрать тип маршрута согласования "Индивидуальный маршрут", "Типовой".
+    public static SelenideElement getRoute_SelectRouteType(String typeRoute){
+        return $x("//a[text()='" + typeRoute + "']");
     }
 
-    // Вид документа -> Каталог
-    public static SelenideElement getDocumentTypeCatalog(String category) {
-        return $x("//span[text()='" + category + "']");
+    // Вид документа -> выбрать вид из справочника (Каталог) "Прочие", "ЛНД", "РД" и тд...
+    public static SelenideElement getTypeApprovalCard_SelectType(String typeApprovalCard) {
+        return $x("//span[text()='" + typeApprovalCard + "']");
     }
 
     // Вид документа -> Каталог -> Выбрать элемент справочника.
-    public static SelenideElement getDocumentTypeCatalogElement(String el) {
-        return $x("//span[text()='" + el + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
+    public static SelenideElement getTypeApprovalCard_SelectCatalogElement(String elTypeApprovalCard) {
+        return $x("//span[text()='" + elTypeApprovalCard + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
     }
 
     // Категория документа -> выбрать категорию.
-    public static SelenideElement getSelectCategory(String type) {
-        return $x("//span[text()='" + type + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
+    public static SelenideElement getCategoryDoc_SelectCategory(String category) {
+        return $x("//span[text()='" + category + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
     }
 }

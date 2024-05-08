@@ -5,30 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/allure-results/0b086c27-3d9f-4745-8a23-1b70cb6c24fa-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/0b18d760-ef80-4954-8a5a-034576349961-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/10ad3fe2-79a5-40ce-a69d-1b75bb7a21a8-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/1c65211a-2c00-420e-9f76-7c63e28432db-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/1cd730b3-4f82-4c1d-a290-78bfcc997d24-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/20ce7104-d6cf-4827-8f4b-24d7b2f8c30b-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/3f7d3128-c6f3-4723-b5ae-e964894cdff8-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/542efa6d-9c6d-471a-9653-0cc21131cac0-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/56846324-e367-457a-b2d8-9235b4dffcd8-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/57b1c0fc-f5a8-4ff2-8e19-b352ebe492e1-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/6a37f1e3-c8c1-4e44-b6e2-e37f7977fc82-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/7f6a3381-3a23-48b8-b71a-8401d95108db-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/aed7c6cc-f81b-4731-a7a0-e00c1318dd3a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/b0bdb43c-ced1-4df2-a262-d16fe533ce3e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/cb3b2bf5-f868-4d0b-a576-50af60ea6b40-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/d32cd452-a31d-4fb0-b8f7-bb216c315ba7-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/e0ba1d65-3da1-417c-9b19-12d49664abd7-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/ee417c1d-6a23-41d3-8565-5e9d98d55b34-container.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Object/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Object/Employees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Object/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Object/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest/ApprovalCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest/ApprovalCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest/ErrandCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest/ErrandCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tools/Asserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/Asserts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tools/Helper/AtributeDocHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/Helper/AtributeDocHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tools/Helper/AuthHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/Helper/AuthHelper.java" afterDir="false" />

@@ -8,17 +8,14 @@ public class AuthHelper {
 
     // Авторизация с заполнением полей и нажатием на кнопку "Войти".
     public static void authorization(Employees user) {
-
-        // Заполняем поля и нажимаем на кнопку "Войти".
         LoginPage.getFieldUser().setValue(user.getLogin());
         LoginPage.getFieldPassword().setValue(user.getPassword());
         LoginPage.getSubmit().click();
         Tools.Asserts.checkAuth();
     }
 
+    // Проверка негативной авторизации с ошибкой.
     public static void negativeAuthorization(Employees user){
-
-
         LoginPage.getFieldUser().setValue(user.getLogin());
         LoginPage.getFieldPassword().setValue(user.getPassword());
         LoginPage.getSubmit().click();

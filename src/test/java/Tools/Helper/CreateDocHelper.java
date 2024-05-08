@@ -2,7 +2,6 @@ package Tools.Helper;
 
 import Page.CreationFormPage;
 import Page.MainPage;
-import com.codeborne.selenide.SelenideElement;
 
 import java.io.File;
 
@@ -11,31 +10,18 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class CreateDocHelper {
 
-    // Метод для выбора типа документа по имени.
-    public SelenideElement typeDoc(String type) {
-        switch (type) {
-            case "Карточка согласования":
-                return MainPage.getButtonDocTypeApprovalCard();
-            case "Поручение":
-                return MainPage.getButtonDocTypeErrand();
-            default:
-                throw new IllegalArgumentException("Неверный тип документа: " + type);
-        }
-    }
-
     // Создаем документ по выбранному типу.
     public void createDoc(String type){
         MainPage.getButtonCreate().click();
-        typeDoc(type).click();
+        MainPage.getDoc_Type(type).click();
     }
 
     AtributeDocHelper atributeDocHelper = new AtributeDocHelper();
 
     // Создаем документ, вид "Карточка согласования".
     public void createApprovalCard(){
-
         CreationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
-        CreationFormPage.getDoc_TypeDoc().click();
+        CreationFormPage.getDoc_TypeApprovalCard().click();
         atributeDocHelper.docType_catalog("Прочие", "Акт");
         CreationFormPage.getDoc_ButtonOkDocType().click();
         CreationFormPage.getDoc_FieldTitleApprovalCard().setValue("Тестовый документ");
