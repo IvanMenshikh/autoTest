@@ -1,6 +1,9 @@
 package Tools.Helper;
 
 import Page.CreationFormPage;
+import Object.Users;
+
+import static com.codeborne.selenide.Condition.visible;
 
 public class AtributeDocHelper {
 
@@ -10,21 +13,25 @@ public class AtributeDocHelper {
         CreationFormPage.getDocumentTypeCatalogElement(el).click();
     }
 
-    //Категория документа "Открытый", "ДВП", "СКХ".
+    // Категория документа "Открытый", "ДВП", "СКХ".
     public void docCategory(String type){
-        CreationFormPage.getDocCategory().click();
+        CreationFormPage.getDoc_CategoryDoc().click();
         CreationFormPage.getSelectCategory(type).click();
-        CreationFormPage.getButtonOkCategory().click();
+        CreationFormPage.getDoc_ButtonOkCategory().click();
     }
 
+    // Создаем маршрут согласования "Индивидуальный маршрут", либо "Типовой", выбираем Вид этапа
     public void createApprovalRoute(String type, String catalog){
-        CreationFormPage.getButtonCreateRoute().click();
+        CreationFormPage.getRoute_ButtonCreateRoute().click();
         CreationFormPage.getRouteType(type).click();
-        CreationFormPage.getButtonConfirmationCreateRoute().click();
-        CreationFormPage.getButtonAddStage().click();
-        CreationFormPage.getButtonAddStageType().click();
+        CreationFormPage.getRoute_ButtonConfirmationCreateRoute().click();
+        CreationFormPage.getStage_ButtonAddStage().click();
+        CreationFormPage.getStage_ButtonAddStageType().click();
         CreationFormPage.getStageTypeCatalog(catalog).click();
-        CreationFormPage.getButtonConfirmationStageType().click();
+        CreationFormPage.getStage_ButtonConfirmationStageType().click();
+        CreationFormPage.getStage_FieldApprovingUser().setValue(Users.author_ApprovalCard.getSurename()).pressEnter();//Доработать
+        CreationFormPage.getStage_AssertApprovingUser().shouldBe(visible);
+        CreationFormPage.getStage_ButtonConfirmationStage().click();
     }
 
 }

@@ -1,17 +1,13 @@
 package Tools.Helper;
 
-import Object.Users;
+import Object.Employees;
 import Page.LoginPage;
 import Page.MainPage;
-import Object.Employees;
 
 public class AuthHelper {
 
     // Авторизация с заполнением полей и нажатием на кнопку "Войти".
-    public static void authorization(String name) {
-
-        // Находим пользователя по имени.
-        Users user = Employees.getUserByName(name);
+    public static void authorization(Employees user) {
 
         // Заполняем поля и нажимаем на кнопку "Войти".
         LoginPage.getFieldUser().setValue(user.getLogin());
@@ -20,9 +16,8 @@ public class AuthHelper {
         Tools.Asserts.checkAuth();
     }
 
-    public static void negativeAuthorization(String name){
+    public static void negativeAuthorization(Employees user){
 
-        Users user = Employees.getUserByName(name);
 
         LoginPage.getFieldUser().setValue(user.getLogin());
         LoginPage.getFieldPassword().setValue(user.getPassword());

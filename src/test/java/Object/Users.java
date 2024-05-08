@@ -1,17 +1,12 @@
 package Object;
 
 import lombok.Getter;
-@Getter
+import lombok.Setter;
+
+@Getter @Setter
 public class Users {
 
-    private String login;
-    private String password;
-    private String name;
+    public static final Employees author_ApprovalCard = new Employees("автор_КарточкаСогласования", "Смокин118", "Smoke_user118", "");
+    public static final Employees ApprovingUser_1 = new Employees("Согласующий_1", "", "", "");
 
-
-    public Users(String name, String login, String password){
-        this.name = name;
-        this.login = login;
-        this.password = password;
-    }
 }

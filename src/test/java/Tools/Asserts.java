@@ -11,6 +11,8 @@ public class Asserts {
         System.out.println("Титул КСЭД - " + armTitle + " авторизация прошла успешно");
     }
 
+
+
     //Доработать!
     public static void checkNegativeAuth(){
         String errorMes = Page.LoginPage.getMessageErrorAuth().getText();

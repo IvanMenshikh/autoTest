@@ -1,32 +1,18 @@
 package Object;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import lombok.Getter;
+@Getter
 public class Employees {
 
-    // Статическая коллекция для хранения всех пользователей.
-    private static Map<String, Users> usersMap = new HashMap<>();
+    private String name;
+    private String surename;
+    private String login;
+    private String password;
 
-    // Статический блок для инициализации коллекции.
-    static {
-
-        usersMap.put("Автор_КарточкаСогласования", new Users(
-
-                "Автор_КарточкаСогласования",
-                "Smoke_user118",
-                ""));
-
-        usersMap.put("Согласующий_1", new Users(
-
-                "Согласующий_1",
-                "",
-                ""));
+    public Employees(String name, String surename, String login, String password){
+        this.name = name;
+        this.surename = surename;
+        this.login = login;
+        this.password = password;
     }
-
-    // Метод для получения пользователя по имени.
-    public static Users getUserByName(String name) {
-        return usersMap.get(name);
-    }
-
 }

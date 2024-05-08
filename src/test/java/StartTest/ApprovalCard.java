@@ -3,6 +3,7 @@ package StartTest;
 import Tools.Helper.AuthHelper;
 import Tools.Helper.CreateDocHelper;
 import org.testng.annotations.Test;
+import Object.Users;
 
 public class ApprovalCard extends BaseTest {
 
@@ -11,8 +12,7 @@ public class ApprovalCard extends BaseTest {
 
         CreateDocHelper createDocHelper = new CreateDocHelper();
 
-
-        AuthHelper.authorization("Автор_КарточкаСогласования");
+        AuthHelper.authorization(Users.author_ApprovalCard);
         createDocHelper.createDoc("Карточка согласования");
         createDocHelper.createApprovalCard();
 

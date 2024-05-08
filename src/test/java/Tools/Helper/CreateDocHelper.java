@@ -34,15 +34,15 @@ public class CreateDocHelper {
     // Создаем документ, вид "Карточка согласования".
     public void createApprovalCard(){
 
-        CreationFormPage.getDocField_docForInformation().shouldBe(visible);
-        CreationFormPage.getDocType().click();
+        CreationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
+        CreationFormPage.getDoc_TypeDoc().click();
         atributeDocHelper.docType_catalog("Прочие", "Акт");
-        CreationFormPage.getButtonOkDocType().click();
-        CreationFormPage.getTitleApprovalCard().setValue("Тестовый документ");
+        CreationFormPage.getDoc_ButtonOkDocType().click();
+        CreationFormPage.getDoc_FieldTitleApprovalCard().setValue("Тестовый документ");
         atributeDocHelper.docCategory("Открытый");
-        CreationFormPage.getDocField_docForConsiderations().click();
-        CreationFormPage.getButtonSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
-        CreationFormPage.getButtonPrint().shouldBe(visible);
+        CreationFormPage.getDoc_FieldDocForConsiderations().click();
+        CreationFormPage.getAttachmen_ButtonSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
+        CreationFormPage.getAttachmen_ButtonPrint().shouldBe(visible);
         atributeDocHelper.createApprovalRoute("Индивидуальный маршрут", "Согласование КС");
 
 
@@ -52,6 +52,6 @@ public class CreateDocHelper {
     // Создаем документ, вид "Поручение".
     public void createErrand(){
 
-        CreationFormPage.getDocField_docForInformation().shouldBe(visible);
+        CreationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
     }
 }
