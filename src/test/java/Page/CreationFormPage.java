@@ -43,6 +43,10 @@ public class CreationFormPage {
     @Getter
     public static SelenideElement attachmen_ButtonPrint = $x("//button[@title = 'Печать']");
 
+    // Контент вложения. Появится после загрузки вложения (текст в предпросмотре).
+    @Getter
+    public static SelenideElement attachmen_content = $x("//div[text() = '000000000000000000000000000000000']");
+
     // Кнопка "Создать маршрут"
     @Getter
     public static SelenideElement route_ButtonCreateRoute = $x("//button[text() = 'Создать маршрут']");
@@ -69,7 +73,7 @@ public class CreationFormPage {
 
     // Доп. модалка, которая появляется, когда добавляешь согласующего в этапе.
     @Getter
-    public static SelenideElement stage_AssertApprovingUser = $x("//div[contains(@id, 'approvers-association-control')]//child::a[contains(text(), 'Смокин118')] ");
+    public static SelenideElement stage_AssertApprovingUser = $x("//div[contains(@id, 'approvers-displayed')]");
 
     // Кнопка "Ок" для подтверждения Вид этапа -> Ок (СОЗДАТЬ).
     @Getter

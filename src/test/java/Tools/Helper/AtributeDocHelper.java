@@ -21,13 +21,13 @@ public class AtributeDocHelper {
     }
 
     // Создаем маршрут согласования "Индивидуальный маршрут", либо "Типовой", выбираем Вид этапа
-    public void createApprovalRoute(String typeRoute, String typeApprovalCard){
+    public void createApprovalRoute(String typeRoute, String stageType){
         CreationFormPage.getRoute_ButtonCreateRoute().click();
         CreationFormPage.getRoute_SelectRouteType(typeRoute).click();
         CreationFormPage.getRoute_ButtonConfirmationCreateRoute().click();
         CreationFormPage.getStage_ButtonAddStage().click();
         CreationFormPage.getStage_ButtonAddStageType().click();
-        CreationFormPage.getTypeApprovalCard_SelectType(typeApprovalCard).click();
+        CreationFormPage.getStage_SelectStageType(stageType).click();
         CreationFormPage.getStage_ButtonConfirmationStageType().click();
         CreationFormPage.getStage_FieldApprovingUser().setValue(Users.author_ApprovalCard.getSurname()).pressEnter();//Доработать
         CreationFormPage.getStage_AssertApprovingUser().shouldBe(visible);

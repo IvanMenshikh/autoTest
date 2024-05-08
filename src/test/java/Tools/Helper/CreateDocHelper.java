@@ -29,6 +29,7 @@ public class CreateDocHelper {
         CreationFormPage.getDoc_FieldDocForConsiderations().click();
         CreationFormPage.getAttachmen_ButtonSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
         CreationFormPage.getAttachmen_ButtonPrint().shouldBe(visible);
+        CreationFormPage.getAttachmen_content().shouldBe(visible);
         atributeDocHelper.createApprovalRoute("Индивидуальный маршрут", "Согласование КС");
 
 
