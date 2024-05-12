@@ -1,11 +1,9 @@
-package Tools.Helper;
-
-import Page.MainPage;
+package Helper;
 
 public class AuthHelper {
 
-    static MainPage mainPage = new MainPage();
-
+//    static MainPage mainPage = new MainPage();
+//
 //    // Авторизация с заполнением полей и нажатием на кнопку "Войти".
 //    public static void authorization(Employees user) {
 //        LoginPage.getFieldUser().clear();

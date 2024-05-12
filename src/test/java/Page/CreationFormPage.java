@@ -9,75 +9,75 @@ public class CreationFormPage {
 
     // Вид документа.
     @Getter
-    public SelenideElement doc_TypeApprovalCard = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
+    private final SelenideElement doc_TypeApprovalCard = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
 
     // Категория документа.
     @Getter
-    public SelenideElement doc_CategoryDoc = $x("//button[contains(@id, 'category') and text() = '...']");
+    private final SelenideElement doc_CategoryDoc = $x("//button[contains(@id, 'category') and text() = '...']");
 
     // Кнопка "ОК" в модалке "Вид документа".
     @Getter
-    public SelenideElement doc_ButtonOkDocType = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok')]");
+    private final SelenideElement doc_ButtonOkDocType = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok')]");
 
     // Кнопка "ОК" в модалке "Категория документа".
     @Getter
-    public SelenideElement doc_ButtonOkCategory = $x("//button[contains(@id, 'category') and text() = 'OK']");
+    private final SelenideElement doc_ButtonOkCategory = $x("//button[contains(@id, 'category') and text() = 'OK']");
 
     // Поле "Заголовок" в форме создания КС.
     @Getter
-    public SelenideElement doc_FieldTitleApprovalCard = $x("//input[@name = 'prop_lecm-document_title']");
+    private final SelenideElement doc_FieldTitleApprovalCard = $x("//input[@name = 'prop_lecm-document_title']");
 
     // Поле документы "Для информации". Использую для ожидания прорисовки страницы.
     @Getter
-    public SelenideElement doc_FieldDocForInformation = $x("//legend[text() = 'Документы для информации']");
+    private final SelenideElement doc_FieldDocForInformation = $x("//legend[text() = 'Документы для информации']");
 
     // Поле документы "Для рассмотрения". Использую для загрузки вложения.
     @Getter
-    public SelenideElement doc_FieldDocForConsiderations = $x("//img[contains(@id, 'attachments-temp-assoc-uploader-button-category_id-0')]");
+    private final SelenideElement doc_FieldDocForConsiderations = $x("//img[contains(@id, 'attachments-temp-assoc-uploader-button-category_id-0')]");
 
     // Кнопка "Выберите файлы". Появляется при добавлении вложений. //button[text() = 'Выберите файлы']
     @Getter
-    public SelenideElement attachmen_ButtonSelectFiles = $x("//input[@name = 'files[]']");
+    private final SelenideElement attachmen_ButtonSelectFiles = $x("//input[@name = 'files[]']");
 
     // Кнопка "Печать". Появляется после загрузки вложения.
     @Getter
-    public SelenideElement attachmen_ButtonPrint = $x("//button[@title = 'Печать']");
+    private final SelenideElement attachmen_ButtonPrint = $x("//button[@title = 'Печать']");
 
     // Контент вложения. Появится после загрузки вложения (текст в предпросмотре).
     @Getter
-    public SelenideElement attachmen_content = $x("//div[text() = '000000000000000000000000000000000']");
+    private final SelenideElement attachmen_content = $x("//div[text() = '000000000000000000000000000000000']");
 
     // Кнопка "Создать маршрут"
     @Getter
-    public SelenideElement route_ButtonCreateRoute = $x("//button[text() = 'Создать маршрут']");
+    private final SelenideElement route_ButtonCreateRoute = $x("//button[text() = 'Создать маршрут']");
 
     // Кнопка "Ок" для подтверждения модалки создания маршрута согласования.
     @Getter
-    public SelenideElement route_ButtonConfirmationCreateRoute = $x("//button[text() = 'ОК']");
+    private final SelenideElement route_ButtonConfirmationCreateRoute = $x("//button[text() = 'ОК']");
 
     // Кнопка "Добавить этап"
     @Getter
-    public SelenideElement stage_ButtonAddStage = $x("//button[text() = 'Добавить этап']");
+    private final SelenideElement stage_ButtonAddStage = $x("//button[text() = 'Добавить этап']");
 
     // Кнопка [...] - Вид этапа.
     @Getter
-    public SelenideElement stage_ButtonAddStageType = $x("//button[contains(@id, 'stage-type-cntrl-tree-picker-button')]");
+    private final SelenideElement stage_ButtonAddStageType = $x("//button[contains(@id, 'stage-type-cntrl-tree-picker-button')]");
 
     // Кнопка "Ок" для подтверждения Вид этапа -> выбрать элемент справочника -> ОК.
     @Getter
-    public SelenideElement stage_ButtonConfirmationStageType = $x("//button[contains(@id, 'stage-type-cntrl-ok')]");
+    private final SelenideElement stage_ButtonConfirmationStageType = $x("//button[contains(@id, 'stage-type-cntrl-ok')]");
 
     // Поле "Согласующие".
     @Getter
-    public SelenideElement stage_FieldApprovingUser = $x("//input[contains(@id, 'approvers-autocomplete')]");
+    private final SelenideElement stage_FieldApprovingUser = $x("//input[contains(@id, 'approvers-autocomplete')]");
 
     // Доп. модалка, которая появляется, когда добавляешь согласующего в этапе.
     @Getter
-    public SelenideElement stage_AssertApprovingUser = $x("//div[contains(@id, 'approvers-displayed')]");
+    private final SelenideElement stage_AssertApprovingUser = $x("//div[contains(@id, 'approvers-displayed')]");
 
     // Кнопка "Ок" для подтверждения Вид этапа -> Ок (СОЗДАТЬ).
     @Getter
-    public SelenideElement stage_ButtonConfirmationStage = $x("//button[contains(@id, 'undefined-form-submit-button')]");
+    private final SelenideElement stage_ButtonConfirmationStage = $x("//button[contains(@id, 'undefined-form-submit-button')]");
 
 
     // Вид этапа -> выбрать элемент справочника.

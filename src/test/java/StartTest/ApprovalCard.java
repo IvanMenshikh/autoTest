@@ -1,7 +1,8 @@
 package StartTest;
 
 import Page.LoginPage;
-import Tools.Helper.CreateDocHelper;
+import Page.MainPage;
+import Tools.ConstructorApprovalCard;
 import org.testng.annotations.Test;
 import Object.Users;
 
@@ -10,13 +11,14 @@ public class ApprovalCard extends BaseTest {
     @Test
     public void startTest(){
 
-        CreateDocHelper createDocHelper = new CreateDocHelper();
+        ConstructorApprovalCard constructorApprovalCard = new ConstructorApprovalCard();
         LoginPage loginPage = new LoginPage();
+        MainPage mainPage = new MainPage();
 
-        //loginPage.negativeAuthorization(Users.negativeUser);
+        loginPage.negativeAuthorization(Users.negativeUser);
         loginPage.authorization(Users.author_ApprovalCard);
-        createDocHelper.createDoc("Карточка согласования");
-        createDocHelper.createApprovalCard();
+        //mainPage.createDoc("Карточка согласования");
+        //constructorApprovalCard.createApprovalCard();
 
     }
 

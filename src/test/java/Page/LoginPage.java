@@ -15,20 +15,24 @@ public class LoginPage extends MainPage{
     int maxTimeout;
 
     // Поле "Логин".
-    public SelenideElement fieldUser = $x("//input[@name = 'username']");
+    @Getter
+    private final SelenideElement fieldUser = $x("//input[@name = 'username']");
 
     // Поле "Пароль".
-    public SelenideElement fieldPassword = $x("//input[@name = 'password']");
+    @Getter
+    private final SelenideElement fieldPassword = $x("//input[@name = 'password']");
 
     // Поле "Войти".
-    public SelenideElement submit = $x("//button[text() = 'Войти']");
+    @Getter
+    private final SelenideElement submit = $x("//button[text() = 'Войти']");
 
     // Модалка "Ваши данные неверны ... ".
     @Getter
-    public static SelenideElement authErrorMessage = $x("//div[text() = 'Ваши данные аутентификации неверны, или сайт Alfresco в данный момент недоступен.']");
+    private static final SelenideElement authErrorMessage = $x("//div[@class = 'error']");
 
-    // Модалка ввода данных (Пароль, логин, кнопка "Войти").
-    public  SelenideElement loginModalWindow = $x("//form[@action = '/share/page/dologin']");
+    // Модапльное окно ввода данных (Пароль, логин, кнопка "Войти").
+    @Getter
+    private final SelenideElement loginModalWindow = $x("//form[@action = '/share/page/dologin']");
 
     // Авторизации
     public void authorization(Employees user){
@@ -42,11 +46,11 @@ public class LoginPage extends MainPage{
 //                .until(() -> fieldUser.isDisplayed() && fieldPassword.isDisplayed() && submit.isDisplayed());
 
         // Запускаю авторизацию.
-        this.fieldUser.clear();
-        this.fieldUser.setValue(user.getLogin());
-        this.fieldPassword.clear();
-        this.fieldPassword.setValue(user.getPassword());
-        this.submit.click();
+        this.getFieldUser().clear();
+        this.getFieldUser().setValue(user.getLogin());
+        this.getFieldPassword().clear();
+        this.getFieldPassword().setValue(user.getPassword());
+        this.getSubmit().click();
         Asserts.checkAuth();
 
     }
@@ -54,20 +58,20 @@ public class LoginPage extends MainPage{
     // Негативная авторизация.
     public void negativeAuthorization(Employees user){
 
-        this.fieldUser.clear();
-        this.fieldUser.setValue(user.getLogin());
-        this.fieldPassword.clear();
-        this.fieldPassword.setValue(user.getPassword());
-        this.submit.click();
+        this.getFieldUser().clear();
+        this.getFieldUser().setValue(user.getLogin());
+        this.getFieldPassword().clear();
+        this.getFieldPassword().setValue(user.getPassword());
+        this.getSubmit().click();
         Asserts.checkNegativeAuth();
 
     }
 
     // Деавторизация под пользователем.
     public void logout(){
-        userMenu.click();
-        buttonExit.click();
-        this.loginModalWindow.shouldBe(visible).isDisplayed();
+        getUserMenu().click();
+        getButtonExit().click();
+        this.getLoginModalWindow().shouldBe(visible);
     }
 }
 

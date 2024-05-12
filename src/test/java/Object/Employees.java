@@ -17,5 +17,4 @@ public class Employees {
         this.login = login;
         this.password = password;
     }
-
 }

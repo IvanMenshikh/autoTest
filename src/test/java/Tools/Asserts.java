@@ -19,6 +19,7 @@ public class Asserts {
         }
     }
 
+    // Доработать!! authErrorMessage_Actual возвращает пустую строку.
     // Проверка негативной авторизации.
     public static void checkNegativeAuth(){
         String authErrorMessage_Actual = LoginPage.getAuthErrorMessage().getText();
