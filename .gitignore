@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Папка временных user ###
+/src/test/java/Object/DataUsers.java

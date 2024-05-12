@@ -11,27 +11,29 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class CreateDocHelper {
 
+    AtributeDocHelper atributeDocHelper = new AtributeDocHelper();
+    CreationFormPage creationFormPage = new CreationFormPage();
+    MainPage mainPage = new MainPage();
+
     // Создаем документ по выбранному типу.
     public void createDoc(String type){
-        MainPage.getButtonCreate().click();
-        MainPage.getDoc_Type(type).click();
+        mainPage.getButtonCreate().click();
+        mainPage.getDoc_Type(type).click();
     }
-
-    AtributeDocHelper atributeDocHelper = new AtributeDocHelper();
 
     // Создаем документ, вид "Карточка согласования".
     public void createApprovalCard(){
-        CreationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
-        Asserts.checkDocTitle("Карточка согласования");
-        CreationFormPage.getDoc_TypeApprovalCard().click();
+        creationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
+        Asserts.checkDocTitle("Карточка согласования", "Карточка согласования");
+        creationFormPage.getDoc_TypeApprovalCard().click();
         atributeDocHelper.docType_catalog("Прочие", "Акт");
-        CreationFormPage.getDoc_ButtonOkDocType().click();
-        CreationFormPage.getDoc_FieldTitleApprovalCard().setValue("Тестовый документ");
+        creationFormPage.getDoc_ButtonOkDocType().click();
+        creationFormPage.getDoc_FieldTitleApprovalCard().setValue("Тестовый документ");
         atributeDocHelper.docCategory("Открытый");
-        CreationFormPage.getDoc_FieldDocForConsiderations().click();
-        CreationFormPage.getAttachmen_ButtonSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
-        CreationFormPage.getAttachmen_ButtonPrint().shouldBe(visible);
-        CreationFormPage.getAttachmen_content().shouldBe(visible);
+        creationFormPage.getDoc_FieldDocForConsiderations().click();
+        creationFormPage.getAttachmen_ButtonSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
+        creationFormPage.getAttachmen_ButtonPrint().shouldBe(visible);
+        creationFormPage.getAttachmen_content().shouldBe(visible);
         atributeDocHelper.createApprovalRoute("Индивидуальный маршрут", "Согласование КС");
 
 
@@ -41,6 +43,6 @@ public class CreateDocHelper {
     // Создаем документ, вид "Поручение".
     public void createErrand(){
 
-        CreationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
+        creationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
     }
 }

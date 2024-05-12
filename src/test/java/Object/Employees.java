@@ -1,7 +1,9 @@
 package Object;
 
 import lombok.Getter;
-@Getter
+import lombok.Setter;
+
+@Getter @Setter
 public class Employees {
 
     private String name;
@@ -15,4 +17,5 @@ public class Employees {
         this.login = login;
         this.password = password;
     }
+
 }

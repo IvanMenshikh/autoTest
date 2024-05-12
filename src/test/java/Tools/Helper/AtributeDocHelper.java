@@ -1,37 +1,39 @@
 package Tools.Helper;
 
-import Page.CreationFormPage;
 import Object.Users;
+import Page.CreationFormPage;
 
 import static com.codeborne.selenide.Condition.visible;
 
 public class AtributeDocHelper {
 
-    // Вид документа, выбираем вид и элемент вида.
+    CreationFormPage creationFormPage = new CreationFormPage();
+
+    // Вид документа, выбираем вид и элемент вида. (Вид "Прочие", элемент вида "Акт")
     public void docType_catalog(String typeApprovalCard, String elTypeApprovalCard){
-        CreationFormPage.getTypeApprovalCard_SelectType(typeApprovalCard).click();
-        CreationFormPage.getTypeApprovalCard_SelectCatalogElement(elTypeApprovalCard).click();
+        creationFormPage.getTypeApprovalCard_SelectType(typeApprovalCard).click();
+        creationFormPage.getTypeApprovalCard_SelectCatalogElement(elTypeApprovalCard).click();
     }
 
     // Категория документа "Открытый", "ДВП", "СКХ".
     public void docCategory(String category){
-        CreationFormPage.getDoc_CategoryDoc().click();
-        CreationFormPage.getCategoryDoc_SelectCategory(category).click();
-        CreationFormPage.getDoc_ButtonOkCategory().click();
+        creationFormPage.getDoc_CategoryDoc().click();
+        creationFormPage.getCategoryDoc_SelectCategory(category).click();
+        creationFormPage.getDoc_ButtonOkCategory().click();
     }
 
     // Создаем маршрут согласования "Индивидуальный маршрут", либо "Типовой", выбираем Вид этапа
     public void createApprovalRoute(String typeRoute, String stageType){
-        CreationFormPage.getRoute_ButtonCreateRoute().click();
-        CreationFormPage.getRoute_SelectRouteType(typeRoute).click();
-        CreationFormPage.getRoute_ButtonConfirmationCreateRoute().click();
-        CreationFormPage.getStage_ButtonAddStage().click();
-        CreationFormPage.getStage_ButtonAddStageType().click();
-        CreationFormPage.getStage_SelectStageType(stageType).click();
-        CreationFormPage.getStage_ButtonConfirmationStageType().click();
-        CreationFormPage.getStage_FieldApprovingUser().setValue(Users.author_ApprovalCard.getSurname()).pressEnter();//Доработать
-        CreationFormPage.getStage_AssertApprovingUser().shouldBe(visible);
-        CreationFormPage.getStage_ButtonConfirmationStage().click();
+        creationFormPage.getRoute_ButtonCreateRoute().click();
+        creationFormPage.getRoute_SelectRouteType(typeRoute).click();
+        creationFormPage.getRoute_ButtonConfirmationCreateRoute().click();
+        creationFormPage.getStage_ButtonAddStage().click();
+        creationFormPage.getStage_ButtonAddStageType().click();
+        creationFormPage.getStage_SelectStageType(stageType).click();
+        creationFormPage.getStage_ButtonConfirmationStageType().click();
+        creationFormPage.getStage_FieldApprovingUser().setValue(Users.author_ApprovalCard.getSurname()).pressEnter();
+        creationFormPage.getStage_AssertApprovingUser().shouldBe(visible);
+        creationFormPage.getStage_ButtonConfirmationStage().click();
     }
 
 }
