@@ -11,11 +11,14 @@ public class Asserts {
     public static void checkAuth() {
         String armTitle_Actual = MainPage.getLogotipArm().getText();
         String armTitle_Expected = "АРМ СЭД";
-        if (armTitle_Actual.equals(armTitle_Expected)) {
-            System.out.println("Титул КСЭД - " + armTitle_Actual + ". Авторизация прошла успешно!");
+        String navigator_Actual = MainPage.getNavigator().getText();
+        String navigator_Expected = "Навигатор";
+        if (armTitle_Actual.equals(armTitle_Expected) && navigator_Actual.equals(navigator_Expected)) {
+            System.out.println("Авторизация прошла успешно!");
         } else {
-            System.out.println("Ошибка: Титул КСЭД не совпадает. Ожидаемый титул - " + armTitle_Expected + ", актуальный титул - " + armTitle_Actual);
-            Assert.fail("Титул АРМ СЭД не совпадает с ожидаемым результатом");
+            System.out.println("Ошибка: Ожидаемый титул - " + armTitle_Expected + ", актуальный титул - " + armTitle_Actual);
+            System.out.println("Ошибка: Ожидаемое наименование поля - " + armTitle_Expected + ", актуальное наименование поля - " + armTitle_Actual);
+            Assert.fail("Авторизация провалена. Условия проверки не совпадают с ожиданиями.");
         }
     }
 

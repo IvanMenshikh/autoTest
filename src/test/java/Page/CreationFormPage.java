@@ -79,6 +79,10 @@ public class CreationFormPage {
     @Getter
     private final SelenideElement stage_ButtonConfirmationStage = $x("//button[contains(@id, 'undefined-form-submit-button')]");
 
+    // Кнопка "Сохранить проект".
+    @Getter
+    private final SelenideElement doc_ButtonSaveProject = $x("//button[text() = 'Сохранить проект']");
+
 
     // Вид этапа -> выбрать элемент справочника.
     public SelenideElement getStage_SelectStageType(String stageType){

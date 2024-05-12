@@ -46,11 +46,18 @@ public class LoginPage extends MainPage{
 //                .until(() -> fieldUser.isDisplayed() && fieldPassword.isDisplayed() && submit.isDisplayed());
 
         // Запускаю авторизацию.
+        // Чистим поле "Имя пользователя" и заполняем нужным логином.
         this.getFieldUser().clear();
         this.getFieldUser().setValue(user.getLogin());
+
+        // Чистим поле "Пароль" и заполняем нужным паролем.
         this.getFieldPassword().clear();
         this.getFieldPassword().setValue(user.getPassword());
+
+        // Отжимаем кнопку "Войти".
         this.getSubmit().click();
+
+        // Выполняем проверку авторизации.
         Asserts.checkAuth();
 
     }
@@ -69,8 +76,14 @@ public class LoginPage extends MainPage{
 
     // Деавторизация под пользователем.
     public void logout(){
+
+        // Отжимаем поле userMenu.
         getUserMenu().click();
+
+        // Отжимаем кнопку "Выход".
         getButtonExit().click();
+
+        // Проверяем, что деавторизация выполнена.
         this.getLoginModalWindow().shouldBe(visible);
     }
 }

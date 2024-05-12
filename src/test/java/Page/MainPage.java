@@ -23,6 +23,10 @@ public class MainPage {
     @Getter
     private static final SelenideElement logotipArm = $x("//span[text() = 'АРМ СЭД']");
 
+    // Поле "Навигатор".
+    @Getter
+    private static final SelenideElement navigator = $x("//div[text() = 'Навигатор']");
+
     // Выбрать тип документа для создания. Создать -> выбери документ.
     public SelenideElement getDoc_Type(String type){
         return $x("//a[text() = '" + type + "']");

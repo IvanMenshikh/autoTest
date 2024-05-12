@@ -15,7 +15,7 @@ public class ApprovalCard extends BaseTest {
         LoginPage loginPage = new LoginPage();
         MainPage mainPage = new MainPage();
 
-        loginPage.negativeAuthorization(Users.negativeUser);
+        //loginPage.negativeAuthorization(Users.negativeUser);
         loginPage.authorization(Users.author_ApprovalCard);
         //mainPage.createDoc("Карточка согласования");
         //constructorApprovalCard.createApprovalCard();

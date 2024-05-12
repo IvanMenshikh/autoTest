@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/allure-results/2d743ffb-2dfa-49e9-a464-a94d599984ee-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/474d69b1-546c-48ba-a432-b0c457ed8646-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5800d7c9-7ad2-41b4-b0e9-1c02b51d036c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/6f356ab2-1b1c-4a63-9989-ffc6c937a129-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/cd64d178-c388-4a96-bf96-916a5288ba75-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/dd735d48-f83b-426a-bf83-c6bd826d495e-container.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/ApprovalDocHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/ApprovalDocHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Object/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Object/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest/ApprovalCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest/ApprovalCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tools/Asserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/Asserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tools/ConstructorApprovalCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/ConstructorApprovalCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

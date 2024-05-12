@@ -1,9 +1,8 @@
 package Object;
 
 import lombok.Getter;
-import lombok.Setter;
 
-@Getter @Setter
+@Getter
 public class Users extends DataUsers {
 
     public static final Employees author_ApprovalCard = new Employees("Автор_КарточкаСогласования", "Смокин118", DataUsers.loginIniciator, DataUsers.passIniciator);
