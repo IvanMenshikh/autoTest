@@ -2,6 +2,10 @@ package Helper;
 
 import Page.CreationFormPage;
 
+import java.io.File;
+
+import static com.codeborne.selenide.Condition.visible;
+
 public class AtributeDocHelper extends CreationFormPage {
 
     // Вид документа, выбираем вид и элемент вида. (Вид "Прочие", элемент вида "Акт")
@@ -14,6 +18,14 @@ public class AtributeDocHelper extends CreationFormPage {
     public void docCategory(String category){
         getDoc_CategoryDoc().click();
         getCategoryDoc_SelectCategory(category).click();
-        getDoc_ButtonOkCategory().click();
+        getDoc_BtnOkCategory().click();
+    }
+
+    // Загружаем вложение для рассмотрения. Дополнительно проверяем что вложение появилось.
+    public void downloadAttachmen() {
+        getDoc_FieldDocForConsiderations().click();
+        getAttachmen_BtnSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
+        getAttachmen_BtnPrint().shouldBe(visible);
+        getAttachmen_content().shouldBe(visible);
     }
 }

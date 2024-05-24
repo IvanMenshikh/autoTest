@@ -9,82 +9,58 @@ import lombok.Getter;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class LoginPage extends MainPage{
+public class LoginPage {
 
-    // Переменная максимального ожидания
-    int maxTimeout;
+    MainPage mainPage = new MainPage();
 
     // Поле "Логин".
     @Getter
-    private final SelenideElement fieldUser = $x("//input[@name = 'username']");
+    public SelenideElement fieldUser = $x("//input[@name = 'username']");
 
     // Поле "Пароль".
     @Getter
-    private final SelenideElement fieldPassword = $x("//input[@name = 'password']");
+    public SelenideElement fieldPassword = $x("//input[@name = 'password']");
 
     // Поле "Войти".
     @Getter
-    private final SelenideElement submit = $x("//button[text() = 'Войти']");
+    public SelenideElement submit = $x("//button[text() = 'Войти']");
 
     // Модалка "Ваши данные неверны ... ".
     @Getter
-    private static final SelenideElement authErrorMessage = $x("//div[@class = 'error']");
+    public static SelenideElement authErrorMessage = $x("//div[@class = 'error']");
 
     // Модапльное окно ввода данных (Пароль, логин, кнопка "Войти").
     @Getter
-    private final SelenideElement loginModalWindow = $x("//form[@action = '/share/page/dologin']");
+    public SelenideElement loginModalWindow = $x("//form[@action = '/share/page/dologin']");
 
-    // Авторизации
-    public void authorization(Employees user){
-
-        // При запуске кода падает тестирование с ошибкой first open URL
-//        // Устанавливаю время максимального ожидания в 3 минуты.
-//        if (maxTimeout == 0) maxTimeout = 30000;
-//
-//        // Устанавливаю ожидания отображения полей ввода.
-//        await().atMost(maxTimeout / 10, TimeUnit.MILLISECONDS)
-//                .until(() -> fieldUser.isDisplayed() && fieldPassword.isDisplayed() && submit.isDisplayed());
-
-        // Запускаю авторизацию.
-        // Чистим поле "Имя пользователя" и заполняем нужным логином.
+    // Авторизация
+    public boolean logIn(String login, String password){
         this.getFieldUser().clear();
-        this.getFieldUser().setValue(user.getLogin());
-
-        // Чистим поле "Пароль" и заполняем нужным паролем.
+        this.getFieldUser().setValue(login);
         this.getFieldPassword().clear();
-        this.getFieldPassword().setValue(user.getPassword());
-
-        // Отжимаем кнопку "Войти".
+        this.getFieldPassword().setValue(password);
         this.getSubmit().click();
-
-        // Выполняем проверку авторизации.
         Asserts.checkAuth();
-
+        return true;
     }
 
     // Негативная авторизация.
-    public void negativeAuthorization(Employees user){
-
+    public boolean negativeAuthorization(Employees user){
         this.getFieldUser().clear();
         this.getFieldUser().setValue(user.getLogin());
         this.getFieldPassword().clear();
         this.getFieldPassword().setValue(user.getPassword());
         this.getSubmit().click();
         Asserts.checkNegativeAuth();
-
+        return true;
     }
 
     // Деавторизация под пользователем.
-    public void logout(){
-
-        // Отжимаем поле userMenu.
-        getUserMenu().click();
-
-        // Отжимаем кнопку "Выход".
-        getButtonExit().click();
-
-        // Проверяем, что деавторизация выполнена.
+    public boolean logOut(){
+        mainPage.getUserMenu().click();
+        mainPage.getBtnExit().click();
         this.getLoginModalWindow().shouldBe(visible);
+        return getFieldUser().isDisplayed() && getFieldPassword().isDisplayed() && getSubmit().isDisplayed();
     }
 }
 

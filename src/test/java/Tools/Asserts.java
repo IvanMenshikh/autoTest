@@ -1,11 +1,13 @@
 package Tools;
 
 import Page.CreationFormPage;
-import org.testng.Assert;
-import Page.MainPage;
 import Page.LoginPage;
+import Page.MainPage;
+import org.testng.Assert;
 
 public class Asserts {
+
+    CreationFormPage creationFormPage = new CreationFormPage();
 
     // Проверяем, что авторизация прошла успешно.
     public static void checkAuth() {
@@ -36,8 +38,8 @@ public class Asserts {
     }
 
     // Проверка титула созданного документа в форме создания.
-    public static void checkDocTitle(String docType, String docType_Expected) {
-        String title_Actual = CreationFormPage.getDoc_CheckDocTitle(docType).getText();
+    public void checkDocTitle(String docType, String docType_Expected) {
+        String title_Actual = creationFormPage.getDoc_CheckDocTitle(docType).getText();
         String title_Expected = "Создать документ \"" + docType_Expected + "\"";
         if (title_Actual.equals(title_Expected)) {
             System.out.println("Вид документа создан корректно. Актуальный титул - " + title_Actual);

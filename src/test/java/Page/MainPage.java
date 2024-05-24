@@ -9,7 +9,7 @@ public class MainPage {
 
     // Кнопка "Создать".
     @Getter
-    private final SelenideElement buttonCreate = $x("//button[text() = 'Создать']");
+    private final SelenideElement btnCreate = $x("//button[text() = 'Создать']");
 
     // Пользовательское меню "Обо мне".
     @Getter
@@ -17,7 +17,7 @@ public class MainPage {
 
     // Кнопка выхода из АРМ КСЭД.
     @Getter
-    private final SelenideElement buttonExit = $x("//td[text()='Выход']");
+    private final SelenideElement btnExit = $x("//td[text()='Выход']");
 
     // Логотип АРМ.
     @Getter
@@ -34,7 +34,7 @@ public class MainPage {
 
     // Создаем документ по выбранному типу.
     public void createDoc(String type){
-        this.buttonCreate.click();
+        this.btnCreate.click();
         this.getDoc_Type(type).click();
     }
 }
