@@ -7,7 +7,6 @@ import Object.Users;
 import Page.LoginPage;
 import Page.MainPage;
 import StartTest.BaseTest;
-
 import org.testng.annotations.Test;
 
 public class C_1_001 extends BaseTest {
@@ -22,38 +21,41 @@ public class C_1_001 extends BaseTest {
         AuthHelper authHelper = new AuthHelper();
         AtributeDocHelper atributeDocHelper = new AtributeDocHelper();
 
-        // Step ? - Негативная авторизация.
-        //loginPage.negativeAuthorization(Users.negativeUser);
+        //Step 1 - Негативная авторизация.
+        authHelper.CheckNegativeLogIn(Users.negativeUser);
 
         // Step ? - Деавторизация текущим пользователем.
         //authHelper.logOut();
 
-        // Step 1 - Авторизация.
+        // Step 2 - Авторизация.
         authHelper.authorization(Users.iniciator_ACard);
 
-        // Step 2 - Создать -> Карточка согласования.
-        mainPage.createDoc("Карточка согласования");
+        // Step 3 - Деавторизация пользователем и повторная авторизация под новым пользователем. (в нашем случае тем же самым)
+        authHelper.LogOutAndNewAuth(Users.iniciator_ACard);
 
-        // Step 3 - Проверка созданного документа. Подтверждаем, что это Карточка согласования.
-        constructorApprovalCard.checkApprovalCard();
+        // Step 3 - Создать -> Карточка согласования.
+        //mainPage.createDoc("Карточка согласования");
 
-        // Step 4 - Выбираем вид Карточки согласования.
-        constructorApprovalCard.selectDocType();
+        // Step 4 - Проверка созданного документа. Подтверждаем, что это Карточка согласования.
+        //constructorApprovalCard.checkApprovalCard();
 
-        // Step 5 - Заполняем поле - "Заголовок".
-        constructorApprovalCard.writeTitle_ApprovalCard("Тестовый документ. Меньших И.А.");
+        // Step 5 - Выбираем вид Карточки согласования.
+        //constructorApprovalCard.selectDocType();
 
-        // Step 6 - Выбираем категорию документа.
-        atributeDocHelper.docCategory("Открытый");
+        // Step 6 - Заполняем поле - "Заголовок".
+        //constructorApprovalCard.writeTitle_ApprovalCard("Тестовый документ. Меньших И.А.");
 
-        // Step 7 - Загружаем вложение. (На форме создания)
-        atributeDocHelper.downloadAttachmen();
+        // Step 7 - Выбираем категорию документа.
+        //atributeDocHelper.docCategory("Открытый");
+
+        // Step 8 - Загружаем вложение. (На форме создания)
+        //atributeDocHelper.downloadAttachmen();
 
 
-        // Step 8 - Создаем маршрут согласования. (Индивидуальный)
-        constructorApprovalCard.createApprovalRoute();
+        // Step 9 - Создаем маршрут согласования. (Индивидуальный)
+        //constructorApprovalCard.createApprovalRoute();
 
-        // Step 9 - Сохраняем проект документа.
+        // Step 10 - Сохраняем проект документа.
         //constructorApprovalCard.createProjectDoc();
     }
 

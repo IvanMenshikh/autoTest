@@ -4,8 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="new catalog BAM">
+    <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="new string Awaitility">
+      <change afterPath="$PROJECT_DIR$/allure-results/069b5df6-3472-425a-a3e4-d89cc89b3ad7-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/0b7dd761-5ec9-4d5e-8b2e-5cd30118cca3-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/117b3563-caef-41ec-86e7-73f9f99997c4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/1b292749-a0f8-49bf-8dfe-5523e972e216-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/1e28daf2-74c3-43fb-b756-eb4b49b0d2fe-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/33d391fa-7e6d-445f-8243-fec0471deff9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4fe1f77b-1ec7-454b-9395-47437059e484-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5ba0ea69-35ca-4045-8e60-4444a54c97d4-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/727bb83e-b8a2-4983-9668-fc1d187186d1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/837e5ce8-88bf-40f1-a140-f9db7c0db599-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8435a08d-1da8-4d44-948e-f5cc05ececc4-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8f220bf8-0749-4748-9397-d4075d4a1e34-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/975388e7-37c2-4be8-8507-8a0b9cf39f77-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a0f7e806-b34c-41b1-aa4b-0f9a8cc99406-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a8756da2-85e8-47fc-9eee-20faded321c4-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ac6d7093-e7d1-4a5d-b9c5-c6f9c49ee762-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ae0c03f9-d485-4082-9059-514e9190e338-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c127c845-4c6d-497f-bedc-04c2e8ecc702-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c2473898-c2b6-42a5-805c-1e733622f8c5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/caf58b3d-ae58-40e8-b3b1-f2b5ad54f2bf-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d4572b33-3956-42aa-b445-3b4357b9519c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d58bbea0-fe2b-4832-bd68-904de4338ba1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/dbb1376c-2f1b-4c65-96be-5cb9fd38ff75-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/e9ce6010-3b7d-46f6-b124-f0b342fd2637-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f0d0ccbb-69cb-4a4f-ab34-dee5a4cb8259-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f448f45a-4694-4c94-9fcd-f03b7f5af250-container.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/AuthHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/AuthHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Object/Employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Object/Employees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Object/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Object/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest/ApprovalCard/C_1_001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest/ApprovalCard/C_1_001.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tools/Asserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/Asserts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +65,12 @@
     &quot;assignee&quot;: &quot;IvanMenshikh&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="718f7acf-1656-4a42-b149-ae97ee1cd28c" />
-        <option name="url" value="https://github.com/IvanMenshikh/autoTest.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IvanMenshikh/autoTest.git&quot;,
+    &quot;accountId&quot;: &quot;e525858a-3239-4c09-85de-8ef5f718fb91&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -56,41 +88,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.ErrandTest.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Maven.KSEDtest [org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test].executor": "Run",
-    "Maven.KSEDtest [verify].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.ApprovalCard.startTest (1).executor": "Run",
-    "TestNG.ApprovalCard.startTest.executor": "Run",
-    "TestNG.AuthorizationCase.authorization.executor": "Run",
-    "TestNG.CS001.testRun.executor": "Run",
-    "TestNG.C_1_001.startTest (1).executor": "Run",
-    "TestNG.CreateDocCase.authorization.executor": "Run",
-    "TestNG.ErrandCard.startTest.executor": "Run",
-    "TestNG.ErrandTest.errand.executor": "Run",
-    "TestNG.StartTest.errand.executor": "Run",
-    "TestNG.StartTest.startTest.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin-PC/IdeaProjects/KSED",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Admin-PC/IdeaProjects/KSED/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ErrandTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.KSEDtest [org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.KSEDtest [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.ApprovalCard.startTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ApprovalCard.startTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AuthorizationCase.authorization.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CS001.testRun.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C_1_001.startTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDocCase.authorization.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ErrandCard.startTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ErrandTest.errand.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.StartTest.errand.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.StartTest.startTest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin-PC/IdeaProjects/KSED&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Admin-PC/IdeaProjects/KSED/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin-PC\IdeaProjects\KSED" />
@@ -101,7 +132,7 @@
       <recent name="Page" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CS001.testRun">
+  <component name="RunManager" selected="TestNG.C_1_001.startTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="KSEDtest" />
@@ -189,8 +220,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CS001.testRun" />
         <item itemvalue="TestNG.C_1_001.startTest (1)" />
+        <item itemvalue="TestNG.CS001.testRun" />
         <item itemvalue="TestNG.C001.startTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.C_2_001.startTest" />
@@ -235,23 +266,7 @@
       <option name="project" value="LOCAL" />
       <updated>1716805706200</updated>
     </task>
-    <task id="LOCAL-00002" summary="new catalog BAM">
-      <option name="closed" value="true" />
-      <created>1716806275608</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1716806275608</updated>
-    </task>
-    <task id="LOCAL-00003" summary="new catalog BAM">
-      <option name="closed" value="true" />
-      <created>1716806311253</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1716806311253</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +291,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="new string Awaitility" />
-    <MESSAGE value="new catalog BAM" />
-    <option name="LAST_COMMIT_MESSAGE" value="new catalog BAM" />
+    <option name="LAST_COMMIT_MESSAGE" value="new string Awaitility" />
   </component>
 </project>
