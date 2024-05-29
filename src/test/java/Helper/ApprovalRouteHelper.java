@@ -2,33 +2,36 @@ package Helper;
 
 import Object.Users;
 import Page.CreationFormPage;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.visible;
 
-public class ApprovalRouteHelper extends CreationFormPage{
+public class ApprovalRouteHelper {
 
-    // Создаем маршрут согласования.
+    CreationFormPage creationFormPage = new CreationFormPage();
+
+    @Step("Операция по созданию маршрута согласования.")
     public void createApprovalRoute(String typeRoute) {
-        getRoute_BtnCreateRoute().click();
-        getRoute_SelectRouteType(typeRoute).click();
-        getRoute_BtnConfirmationCreateRoute().click();
+        creationFormPage.getRoute_BtnCreateRoute().click();
+        creationFormPage.getRoute_SelectRouteType(typeRoute).click();
+        creationFormPage.getRoute_BtnConfirmationCreateRoute().click();
     }
 
-    // Создаем этап согласования.
+    @Step("Операция по созданию этапа согласования в маршруте согласования.")
     public void createApprovalStage(String stageType) {
-        getStage_BtnAddStage().click();
-        getStage_BtnConfirmationStage().shouldBe(visible);
-        getStage_BtnAddStageType().click();
-        getStage_SelectStageType(stageType).click();
-        getStage_BtnConfirmationStageType().click();
-        getStage_BtnConfirmationStage().click();
+        creationFormPage.getStage_BtnAddStage().click();
+        creationFormPage.getStage_BtnConfirmationStage().shouldBe(visible);
+        creationFormPage.getStage_BtnAddStageType().click();
+        creationFormPage.getStage_SelectStageType(stageType).click();
+        creationFormPage.getStage_BtnConfirmationStageType().click();
+        creationFormPage.getStage_BtnConfirmationStage().click();
     }
 
     // ВНИМАНИЕ.
-    // Не сделано до конца!!!
-    // Добавляем согласующего по иконке человечка.
+    // Метод в процессе реализации.
+    @Step("Операция по добавлению пользователя в этап согласования, через иконку человечка.")
     public void addItemStage(){
-        getDoc_BtnAddItemStage().click();
-        getModalWindow_SearchItemStage().setValue(Users.iniciator_ACard.getSurname()).pressEnter();
+        creationFormPage.getDoc_BtnAddItemStage().click();
+        creationFormPage.getDoc_ModalWindow_SearchItemStage().setValue(Users.iniciator_ACard.getSurname()).pressEnter();
     }
 }

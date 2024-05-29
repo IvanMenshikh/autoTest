@@ -9,27 +9,30 @@ public class MainPage {
 
     // Кнопка "Создать".
     @Getter
-    public final SelenideElement btnCreate = $x("//button[text() = 'Создать']");
-
-    // Пользовательское меню "Обо мне".
-    @Getter
-    public static final SelenideElement userMenu = $x("//span[contains(@id,'USER_MENU')]");
-
-    // Кнопка выхода из АРМ КСЭД.
-    @Getter
-    public final SelenideElement btnExit = $x("//td[text()='Выход']");
+    public SelenideElement btnCreate = $x("//button[text() = 'Создать']");
 
     // Логотип АРМ.
     @Getter
-    public static final SelenideElement logotipArm = $x("//span[text() = 'АРМ СЭД']");
+    public SelenideElement logotipArm = $x("//span[text() = 'АРМ СЭД']");
 
-    // Поле "Навигатор".
-    @Getter
-    public static final SelenideElement navigator = $x("//div[text() = 'Навигатор']");
+     // Блоки узлов. Моя работа, Навигатор, Отчеты и тд...
+    public SelenideElement getBlock(String block){
+        return $x("//div[text() = '" + block + "']");
+    }
 
     // Выбрать тип документа для создания. Создать -> выбери документ.
     public SelenideElement getDoc_Type(String type){
         return $x("//a[text() = '" + type + "']");
+    }
+
+    // Проверка блоков. Проверяем узлы внутри блока.
+    public SelenideElement getNodeBlock(String nodeBlock){
+        return $x("//span[text() = '" + nodeBlock + "']");
+    }
+
+    // Атрибуты узлов. Появляются после перехода в узел.
+    public SelenideElement getAtributeNode(String atributeNode){
+        return $x("//button[text() = '" + atributeNode +"']");
     }
 
     // Создаем документ по выбранному типу.

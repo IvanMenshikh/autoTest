@@ -8,8 +8,6 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class LoginPage {
 
-    MainPage mainPage = new MainPage();
-
     // Поле "Логин".
     @Getter
     public final SelenideElement fieldUser = $x("//input[@name = 'username']");
@@ -47,13 +45,6 @@ public class LoginPage {
         this.getFieldPassword().clear();
         this.getFieldPassword().setValue(password);
         this.getSubmit().click();
-        return true;
-    }
-
-    // Деавторизация под пользователем.
-    public boolean logOut(){
-        mainPage.getUserMenu().click();
-        mainPage.getBtnExit().click();
         return true;
     }
 }

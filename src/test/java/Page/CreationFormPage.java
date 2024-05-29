@@ -35,6 +35,18 @@ public class CreationFormPage {
     @Getter
     public SelenideElement doc_FieldDocForConsiderations = $x("//img[contains(@id, 'attachments-temp-assoc-uploader-button-category_id-0')]");
 
+    // Кнопка "Сохранить проект".
+    @Getter
+    public SelenideElement doc_BtnSaveProject = $x("//button[text() = 'Сохранить проект']");
+
+    // Кнопка "Добавить согласующего" - "Человечек".
+    @Getter
+    public SelenideElement doc_BtnAddItemStage = $x("//td[contains(@class, 'col-actions yui-dt-last')]//a[@title = 'Добавить сотрудника']");
+
+    // Модалка для выбора пользователя в этап согласования.
+    @Getter
+    public SelenideElement doc_ModalWindow_SearchItemStage = $x("//input[contains(@id, 'picker-employee-search-text')]");
+
     // Кнопка "Выберите файлы". Появляется при добавлении вложений. //button[text() = 'Выберите файлы']
     @Getter
     public SelenideElement attachmen_BtnSelectFiles = $x("//input[@name = 'files[]']");
@@ -46,6 +58,10 @@ public class CreationFormPage {
     // Контент вложения. Появится после загрузки вложения (текст в предпросмотре).
     @Getter
     public SelenideElement attachmen_content = $x("//div[text() = '000000000000000000000000000000000']");
+
+    // Ошибка. Не удалось просмотреть вложение.
+    @Getter
+    public SelenideElement attachmen_ErrorMessage = $x("//span[text() = 'Не удалось предварительно просмотреть данный документ']");
 
     // Кнопка "Создать маршрут"
     @Getter
@@ -78,18 +94,6 @@ public class CreationFormPage {
     // Кнопка "Ок" для подтверждения Вид этапа -> Ок (СОЗДАТЬ).
     @Getter
     public SelenideElement stage_BtnConfirmationStage = $x("//button[contains(@id, 'undefined-form-submit-button')]");
-
-    // Кнопка "Сохранить проект".
-    @Getter
-    public SelenideElement doc_BtnSaveProject = $x("//button[text() = 'Сохранить проект']");
-
-    // Кнопка "Добавить согласующего" - "Человечек".
-    @Getter
-    public SelenideElement doc_BtnAddItemStage = $x("//td[contains(@class, 'col-actions yui-dt-last')]//a[@title = 'Добавить сотрудника']");
-
-    // Модалка для выбора пользователя в этап согласования.
-    @Getter
-    public SelenideElement modalWindow_SearchItemStage = $x("//input[contains(@id, 'picker-employee-search-text')]");
 
     // Вид этапа -> выбрать элемент справочника.
     public SelenideElement getStage_SelectStageType(String stageType){
