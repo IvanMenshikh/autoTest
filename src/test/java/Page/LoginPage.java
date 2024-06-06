@@ -22,7 +22,7 @@ public class LoginPage {
 
     // Модалка "Ваши данные неверны ... ".
     @Getter
-    public static final SelenideElement authErrorMessage = $x("//div[@class = 'error']");
+    public final SelenideElement authErrorMessage = $x("//div[@class = 'error']");
 
     // Модапльное окно ввода данных (Пароль, логин, кнопка "Войти").
     @Getter

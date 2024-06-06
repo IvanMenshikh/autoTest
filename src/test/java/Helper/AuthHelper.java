@@ -67,7 +67,7 @@ public class AuthHelper {
                         && loginPage.getFieldPassword().isDisplayed()
                         && loginPage.getSubmit().isDisplayed());
         loginPage.negativeLogIn(user.getLogin(), user.getPassword());
-        LoginPage.getAuthErrorMessage()
+        loginPage.getAuthErrorMessage()
                 .shouldBe(visible)
                 .shouldHave(innerText("Ваши данные аутентификации неверны, или сайт Alfresco в данный момент недоступен."));
     }

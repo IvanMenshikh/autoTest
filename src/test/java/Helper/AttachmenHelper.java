@@ -13,10 +13,10 @@ public class AttachmenHelper {
 
     @Step("Операция по загрузке вложения в категорию для рассмотрения на форме создания документа")
     public void downloadAttachmen() {
-        attachmenPage.getDoc_FieldDocForConsiderations().click();
-        attachmenPage.getAttachmen_BtnSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
-        attachmenPage.getAttachmen_BtnPrint().shouldBe(visible);
-        attachmenPage.getAttachmen_content().shouldBe(visible);
-        attachmenPage.getAttachmen_ErrorMessage().shouldNotBe(visible);
+        attachmenPage.getFieldDocForConsiderations().click();
+        attachmenPage.getBtnSelectFiles().uploadFile(new File("src/test/java/Attachmens/TestAttachmens.docx"));
+        attachmenPage.getBtnPrint().shouldBe(visible);
+        attachmenPage.getContent().shouldBe(visible);
+        attachmenPage.getErrorMessage().shouldNotBe(visible);
     }
 }

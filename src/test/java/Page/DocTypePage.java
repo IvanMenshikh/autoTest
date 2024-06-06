@@ -5,15 +5,15 @@ import lombok.Getter;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class KsDocTypePage {
+public class DocTypePage {
 
     // Вид документа.
     @Getter
-    public SelenideElement docTypeKs = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
+    public final SelenideElement docTypeKs = $x("//button[contains(@id, 'document-kind-assoc-cntrl-tree')]");
 
     // Кнопка "ОК" в модалке "Вид документа".
     @Getter
-    public SelenideElement btnOk = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok')]");
+    public final SelenideElement btnOk = $x("//button[contains(@id, 'document-kind-assoc-cntrl-ok')]");
 
     // Вид документа -> Каталог, выбрать вид из "Прочие", "ЛНД", и тд...
     public SelenideElement getTypeKs_SelectType(String typeKs) {

@@ -4,11 +4,11 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class DefoultDocPage {
+public class DocPage {
 
     // Элемент созданного документ: "Категория документа".
-    public SelenideElement getFieldCategoryDoc(String categoryType){
-        return $x("//div[@class='main-content']//*[text()='" + categoryType + "']");
+    public SelenideElement getFieldCategoryDoc(String categoryDoc){
+        return $x("//div[@class='main-content']//*[text()='" + categoryDoc + "']");
     }
 
     // Элемент созданного документ: "Вид документа".

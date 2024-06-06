@@ -9,8 +9,8 @@ public class CategoryDocHelper {
 
     @Step("Операция выбора категории документа.")
     public void docCategory(String category){
-        categoryDocPage.getDoc_CategoryDoc().click();
+        categoryDocPage.getCategoryDoc().click();
         categoryDocPage.getCategoryDoc_SelectCategory(category).click();
-        categoryDocPage.getDoc_BtnOkCategory().click();
+        categoryDocPage.getBtnOkCategory().click();
     }
 }

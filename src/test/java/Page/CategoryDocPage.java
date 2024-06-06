@@ -9,11 +9,11 @@ public class CategoryDocPage {
 
     // Категория документа. Кнопка [...] на форме создания.
     @Getter
-    public SelenideElement doc_CategoryDoc = $x("//button[contains(@id, 'category') and text() = '...']");
+    public final SelenideElement categoryDoc = $x("//button[contains(@id, 'category') and text() = '...']");
 
     // Кнопка "ОК" в модалке "Категория документа".
     @Getter
-    public SelenideElement doc_BtnOkCategory = $x("//button[contains(@id, 'category') and text() = 'OK']");
+    public final SelenideElement btnOkCategory = $x("//button[contains(@id, 'category') and text() = 'OK']");
 
     // Категория документа -> выбрать категорию.
     public SelenideElement getCategoryDoc_SelectCategory(String category) {

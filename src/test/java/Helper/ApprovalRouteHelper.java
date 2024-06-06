@@ -34,6 +34,6 @@ public class ApprovalRouteHelper {
     @Step("Операция по добавлению пользователя в этап согласования, через иконку человечка.")
     public void addItemStage(){
         approvalRoutePage.getStage_BtnAddItemStage().click();
-        approvalRoutePage.getDoc_ModalWindow_SearchItemStage().setValue(Users.iniciator_ACard.getSurname()).pressEnter();
+        approvalRoutePage.getStage_ModalWindow_SearchItemStage().setValue(Users.iniciator_ACard.getSurname()).pressEnter();
     }
 }

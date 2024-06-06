@@ -11,17 +11,17 @@ public class CreationDocHelper {
 
     @Step("Операция ожидания проприсовки страницы по локаторам в КС.")
     public void checkApprovalCard() {
-        creationFormPage.getDoc_FieldDocForInformation().shouldBe(visible);
+        creationFormPage.getFieldDocForInformation().shouldBe(visible);
         creationFormPage.getDoc_CheckDocTitle("Карточка согласования").shouldBe(visible);
     }
 
     @Step("Заполняем поле заголовок.")
     public void writeTitle_ApprovalCard(String title){
-        creationFormPage.getDoc_FieldTitleApprovalCard().setValue(title);
+        creationFormPage.getFieldTitleApprovalCard().setValue(title);
     }
 
     @Step("Операция 'Сохранить проект'")
     public void createProjectDoc(){
-        creationFormPage.getDoc_BtnSaveProject().click();
+        creationFormPage.getBtnSaveProject().click();
     }
 }
