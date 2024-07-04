@@ -8,15 +8,18 @@ public class docHelper {
 
     DocPage docPage = new DocPage();
 
+    public String getDocRegNumber() {
+        return docPage.docNum.getText();
+    }
+
     @Step("Проверяем, что РК КС создана, атрибуты отобразились.")
     public void checkLoadDoc() {
 
         SoftAssertions softly = new SoftAssertions();
-        // В работе
-        softly.assertThat(docPage.getFieldCategoryDoc("Открытый").innerText()).as("Категория документа").isEqualTo("ДВП");
+
+        softly.assertThat(docPage.getFieldCategoryDoc("Открытый").innerText()).as("Категория документа").isEqualTo("Открытый");
         softly.assertThat(docPage.getFieldDocType("Акт").innerText()).as("Вид документа").isEqualTo("Акт");
         softly.assertThat(docPage.getFieldStateMachineStatus("Проект").innerText()).as("Статус документа").isEqualTo("Проект");
-
         softly.assertAll();
     }
 }

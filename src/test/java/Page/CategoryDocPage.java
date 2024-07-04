@@ -19,7 +19,4 @@ public class CategoryDocPage {
     public SelenideElement getCategoryDoc_SelectCategory(String category) {
         return $x("//span[text()='" + category + "']//ancestor::tr//child::span[contains(@class, 'addIcon')]");
     }
-
-
-
 }

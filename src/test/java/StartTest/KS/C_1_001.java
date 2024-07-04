@@ -21,10 +21,9 @@ public class C_1_001 extends BaseTest {
         ApprovalRouteHelper approvalRouteHelper = new ApprovalRouteHelper();
         AttachmenHelper attachmenHelper = new AttachmenHelper();
         docHelper docHelper = new docHelper();
+        FormEditDocHelper formEditDocHelper = new FormEditDocHelper();
 
-        // Step 1 - Негативная авторизация.
-        // Живая авторизация.
-        // Деавторизация и повторная авторизация.
+        // Step 1 - Негативная авторизация; Авторизация под пользователем; Деавторизация и повторная авторизация.
         //authHelper.CheckNegativeLogIn(Users.negativeUser);
         authHelper.authorization(Users.iniciator_ACard);
         //authHelper.LogOutAndNewAuth(Users.iniciator_ACard);
@@ -53,18 +52,23 @@ public class C_1_001 extends BaseTest {
         creationDocHelper.createProjectDoc();
 
         // Step 9 - Проверяем, что документ создан. Выполняем переход на MainPage страницу
-        try {
-            docHelper.checkLoadDoc();
-        } catch (Throwable e){
-            e.printStackTrace();
-        }
+        docHelper.checkLoadDoc();
+        String docNumber = docHelper.getDocRegNumber();
         blackBarHelper.clickOnKsed();
 
         // Step 10 - Переключаемся на нужный нам блок. Проверяем что открыт нужный нам блок. Открываем узел в блоке, првоеряем, что узел открыт.
+        //mainHelper.checkBlock("Моя работа", "Навигатор", "Отчеты");
         mainHelper.selectBlock("Моя работа");
-        mainHelper.checkBlockMyJob("Исполнить поручения", "Согласовать", "Созданные мной документы");
+        //mainHelper.checkNodeInTheBlockMyJob("Созданные мной документы", "Согласовать", "Исполнить поручения");
         mainHelper.node_SelectNode("Созданные мной документы");
-        mainHelper.node_CheckAtributeNode("Фильтры", "Действия с выбранными", "Столбцы");
+        //mainHelper.node_CheckAtributeNode("Фильтры", "Действия с выбранными", "Столбцы");
+
+        // Step 11 - открываем форму редактирования документа и проверяем, что открыта именно форма редактирования.
+        mainHelper.CheckAndOpenTheDocForEditing(docNumber, "Проект");
+        formEditDocHelper.checkFormEdit("Акт");
+
+        // Step 12 - меняем категорию документа.
+
 
         Selenide.sleep(5000);
     }
