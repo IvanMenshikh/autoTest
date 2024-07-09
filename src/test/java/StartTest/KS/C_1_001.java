@@ -12,63 +12,75 @@ public class C_1_001 extends BaseTest {
     @Test
     public void startTest(){
 
-        AuthHelper authHelper = new AuthHelper();
-        MainHelper mainHelper = new MainHelper();
-        CreationDocHelper creationDocHelper = new CreationDocHelper(); // ?
-        BlackBarHelper blackBarHelper = new BlackBarHelper();
-        CategoryDocHelper categoryDocHelper = new CategoryDocHelper();
-        DocTypeHelper docTypeHelper = new DocTypeHelper();
-        ApprovalRouteHelper approvalRouteHelper = new ApprovalRouteHelper();
-        AttachmenHelper attachmenHelper = new AttachmenHelper();
-        docHelper docHelper = new docHelper();
-        FormEditDocHelper formEditDocHelper = new FormEditDocHelper();
+        AuthHelper authHelper = new AuthHelper(); // Хелпер авторизации.
+        MainHelper mainHelper = new MainHelper(); // Хелпер главной страницы КСЭД.
+        CreationDocHelper creationDocHelper = new CreationDocHelper(); // Хелпер формы создания документа.
+        BlackBarHelper blackBarHelper = new BlackBarHelper(); // Хелпер черной полосы. (маршрутизатор по КСЭД)
+        CategoryDocHelper categoryDocHelper = new CategoryDocHelper(); // Хелпер категории документов.
+        DocTypeHelper docTypeHelper = new DocTypeHelper(); // Хедпер видов документов.
+        ApprovalRouteHelper approvalRouteHelper = new ApprovalRouteHelper(); // Хелпер маршрутов согласования.
+        AttachmenHelper attachmenHelper = new AttachmenHelper(); // Хелпер по вложениями.
+        docHelper docHelper = new docHelper(); // Хелпер страницы проекта документа.
+        FormEditDocHelper formEditDocHelper = new FormEditDocHelper(); // Хелпер формы редактирования атрибутов документа.
+        BlockMyJobHelper blockMyJobHelper = new BlockMyJobHelper(); // Хелпер блока "Моя работа".
+
+        //
+        // Дополнительные методы, не включены в сценарий!
+        //
+        // Описание методов:
+        // 1. Негативная авторизация.
+        // 2. Деавторизация с повторной авторизацией.
+        // 3. Загрузка вложения на форме создания.
+        // 4. Создание маршрута согласования с этапом. route - Индивидуальный; stage - Согласование КС
+        // 5. Проверка узлов в блоке "Моя работа".
+        // 6. Проверка атрибуты открытого узла\подузла.
+        //
+        // Методы по порядку из перечня:
+        // authHelper.CheckNegativeLogIn(Users.negativeUser);
+        // authHelper.LogOutAndNewAuth(Users.iniciator_ACard);
+        // attachmenHelper.downloadAttachmen();
+        // approvalRouteHelper.createApprovalRoute("Индивидуальный");
+        // approvalRouteHelper.createApprovalStage("Согласование КС");
+        // blockMyJobHelper.checkNodeInTheBlockMyJob("Созданные мной документы", "Согласовать", "Исполнить поручения");
+        // blockMyJobHelper.node_CheckAtributeNode("Фильтры", "Действия с выбранными", "Столбцы");
+        //
 
         // Step 1 - Негативная авторизация; Авторизация под пользователем; Деавторизация и повторная авторизация.
-        //authHelper.CheckNegativeLogIn(Users.negativeUser);
         authHelper.authorization(Users.iniciator_ACard);
-        //authHelper.LogOutAndNewAuth(Users.iniciator_ACard);
 
         // Step 2 - Создаем выбранный тип документа, проверяем на соответсвие.
         mainHelper.createDoc("Карточка согласования");
         creationDocHelper.checkApprovalCard();
 
-        // Step 3 - Выбираем вид КС.
+        // Step 3 - Выбираем вид КС. Заполняем заголовок. Выбираем категорию и вид документа. Проверяем на соответствие.
         docTypeHelper.docType("Прочие", "Акт");
-
-        // Step 4 - Заполняем поле - "Заголовок".
         creationDocHelper.writeTitle_ApprovalCard("Тестовый документ. Меньших И.А.");
-
-        // Step 5 - Выбираем категорию документа.
         categoryDocHelper.docCategory("Открытый");
+        creationDocHelper.CheckCompletedFields("Акт", "Открытый");
 
-        // Step 6 - Загружаем вложение. (На форме создания)
-        //attachmenHelper.downloadAttachmen();
-
-        // Step 7 - Создаем маршрут согласования. (route - Индивидуальный; stage - Согласование КС)
-        //approvalRouteHelper.createApprovalRoute("Индивидуальный");
-        //approvalRouteHelper.createApprovalStage("Согласование КС");
-
-        // Step 8 - Сохраняем проект документа.
+        // Step 4 - Сохраняем проект документа. Проверяем атрибуты документа. Сохраняем номер документа в переменную, пригодится далее...
         creationDocHelper.createProjectDoc();
-
-        // Step 9 - Проверяем, что документ создан. Выполняем переход на MainPage страницу
         docHelper.checkLoadDoc();
         String docNumber = docHelper.getDocRegNumber();
+
+        // Step 5 - Выполняем переход на MainPage страницу. Открываем блок "Моя работа". Открываем узел. Открываем подузел.
         blackBarHelper.clickOnKsed();
+        blockMyJobHelper.openBlockMyJob();
+        blockMyJobHelper.node_SelectNode("Созданные мной документы");
+        blockMyJobHelper.node_SelectSubnode_project("Проекты");
 
-        // Step 10 - Переключаемся на нужный нам блок. Проверяем что открыт нужный нам блок. Открываем узел в блоке, првоеряем, что узел открыт.
-        //mainHelper.checkBlock("Моя работа", "Навигатор", "Отчеты");
-        mainHelper.selectBlock("Моя работа");
-        //mainHelper.checkNodeInTheBlockMyJob("Созданные мной документы", "Согласовать", "Исполнить поручения");
-        mainHelper.node_SelectNode("Созданные мной документы");
-        //mainHelper.node_CheckAtributeNode("Фильтры", "Действия с выбранными", "Столбцы");
-
-        // Step 11 - открываем форму редактирования документа и проверяем, что открыта именно форма редактирования.
-        mainHelper.CheckAndOpenTheDocForEditing(docNumber, "Проект");
+        // Step 6 - открываем форму редактирования документа и проверяем, что открыта именно форма редактирования.
+        blockMyJobHelper.CheckAndOpenTheDocForEditing(docNumber, "Проект");
         formEditDocHelper.checkFormEdit("Акт");
 
-        // Step 12 - меняем категорию документа.
+        // Step 7 - Меняем категорию документа. Проверяем соответствие.
+        categoryDocHelper.deletedCategoryAndSelectedNew("ДВП");
 
+        // Step 8 - Сохранить изменения, проверяем категорию повторно.
+
+        // Step 9 - Удаляем документ, проверяем текстовое сообщение "Документ не найден. Он мог быть удален. Или у Вас нет прав. Обратитесь к администратору.".
+
+        // Step 10 - Проверяем, что документ удален.
 
         Selenide.sleep(5000);
     }

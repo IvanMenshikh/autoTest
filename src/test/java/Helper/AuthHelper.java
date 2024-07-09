@@ -2,6 +2,7 @@ package Helper;
 
 import Object.Employees;
 import Page.BlackBarPage;
+import Page.BlockMyJobPage;
 import Page.LoginPage;
 import Page.MainPage;
 import io.qameta.allure.Step;
@@ -20,6 +21,7 @@ public class AuthHelper {
     MainPage mainPage = new MainPage();
     BlackBarPage blackBarPage = new BlackBarPage();
     BlackBarHelper blackBarHelper = new BlackBarHelper();
+    BlockMyJobPage blockMyJobPage = new BlockMyJobPage();
 
     @Step("Операция авторизации в системе.")
     public void authorization(Employees user) {
@@ -33,14 +35,14 @@ public class AuthHelper {
                             && loginPage.getSubmit().isDisplayed()); // Ожидаем появление поля: "Войти".
         loginPage.logIn(user.getLogin(), user.getPassword());
         mainPage.getLogotipArm().shouldHave(innerText("АРМ СЭД")); // Проверяем наименование логотипа АРМ.
-        mainPage.getBlock("Навигатор").shouldBe(visible); // Проверяем, что поле "Навиготор" видимое.
+        blockMyJobPage.getBlockMyJob().shouldBe(visible); // Проверяем, что блок "Моя работа" отображается на главной странице.
         blackBarPage.getUserMenu().shouldHave(innerText(user.getName() + " " + user.getSurname())); // Проверяем имя + фамилию авторизированного пользователя.
     }
 
     @Step("Операция деавторизации с последующей авторизацией под новым пользователем.")
     public void LogOutAndNewAuth(Employees user){
         mainPage.getLogotipArm().shouldHave(innerText("АРМ СЭД"));
-        mainPage.getBlock("Навигатор").shouldBe(visible);
+        blockMyJobPage.getBlockMyJob().shouldBe(visible);
         blackBarHelper.logOut();
         if (maxTimeout == 0) maxTimeout = 60000;
         await()
@@ -52,7 +54,7 @@ public class AuthHelper {
                         && loginPage.getSubmit().isDisplayed());
         loginPage.logIn(user.getLogin(), user.getPassword());
         mainPage.getLogotipArm().shouldHave(innerText("АРМ СЭД"));
-        mainPage.getBlock("Навигатор").shouldBe(visible);
+        blockMyJobPage.getBlockMyJob().shouldBe(visible);
         blackBarPage.getUserMenu().shouldHave(innerText(user.getName() + " " + user.getSurname()));
     }
 

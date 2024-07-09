@@ -2,14 +2,14 @@ package Helper;
 
 import Object.Users;
 import Page.ApprovalRoutePage;
-import Page.CreationFormPage;
+import Page.CreationDocPage;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.visible;
 
 public class ApprovalRouteHelper {
 
-    CreationFormPage creationFormPage = new CreationFormPage();
+    CreationDocPage creationFormPage = new CreationDocPage();
     ApprovalRoutePage approvalRoutePage = new ApprovalRoutePage();
 
     @Step("Операция по созданию маршрута согласования.")

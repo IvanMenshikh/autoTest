@@ -5,7 +5,7 @@ import lombok.Getter;
 
 import static com.codeborne.selenide.Selenide.$x;
 @Getter
-public class CreationFormPage {
+public class CreationDocPage {
 
     // Поле "Заголовок" в форме создания КС.
     @Getter
@@ -23,4 +23,15 @@ public class CreationFormPage {
     public SelenideElement getDoc_CheckDocTitle(String docType){
         return $x("//span[text() = 'Создать документ \"" + docType + "\"']");
     }
+
+    // Поле "Вид документа".
+    public SelenideElement getFieldDocType(String docType){
+        return $x("//span[text() = '" + docType + "']//ancestor::div[contains(@id, 'currentValueDisplay')]");
+    }
+
+    // Поле "Категория документа".
+    public SelenideElement getFieldDocCategory(String docCategory){
+        return $x("//span[text() = '" + docCategory + "']//ancestor::div[contains(@id, 'currentValueDisplay')]");
+    }
+
 }
