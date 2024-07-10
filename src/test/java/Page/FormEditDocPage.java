@@ -11,9 +11,13 @@ public class FormEditDocPage {
     @Getter
     public final SelenideElement titleFormEdit = $x("//span[contains(text(), 'Редактирование атрибутов')]");
 
-    // Поле Номер.
+    // Поле "Номер".
     @Getter
     public final SelenideElement number = $x("//label[text() = 'Номер:']");
+
+    // Кнопка сохранить
+    @Getter
+    public final SelenideElement btnSave = $x("//button[text() = 'Сохранить']");
 
     // Атрибуты в форме редактирования. Номер, дата создания, инициатор и тд.
     public SelenideElement getAtributeFormEdit(String atributeFormEdit){

@@ -23,6 +23,8 @@ public class C_1_001 extends BaseTest {
         docHelper docHelper = new docHelper(); // Хелпер страницы проекта документа.
         FormEditDocHelper formEditDocHelper = new FormEditDocHelper(); // Хелпер формы редактирования атрибутов документа.
         BlockMyJobHelper blockMyJobHelper = new BlockMyJobHelper(); // Хелпер блока "Моя работа".
+        ActionPanelHelper actionPanelHelper = new ActionPanelHelper(); // Хелпер панели действий документа.
+        BannerHelper bannerHelper = new BannerHelper(); // Хелпер баннеров.
 
         //
         // Дополнительные методы, не включены в сценарий!
@@ -60,7 +62,7 @@ public class C_1_001 extends BaseTest {
 
         // Step 4 - Сохраняем проект документа. Проверяем атрибуты документа. Сохраняем номер документа в переменную, пригодится далее...
         creationDocHelper.createProjectDoc();
-        docHelper.checkLoadDoc();
+        docHelper.checkLoadDoc("Открытый", "Акт", "Проект");
         String docNumber = docHelper.getDocRegNumber();
 
         // Step 5 - Выполняем переход на MainPage страницу. Открываем блок "Моя работа". Открываем узел. Открываем подузел.
@@ -77,11 +79,20 @@ public class C_1_001 extends BaseTest {
         categoryDocHelper.deletedCategoryAndSelectedNew("ДВП");
 
         // Step 8 - Сохранить изменения, проверяем категорию повторно.
+        formEditDocHelper.saveChanges();
+        docHelper.checkCategoryDoc("ДВП");
 
-        // Step 9 - Удаляем документ, проверяем текстовое сообщение "Документ не найден. Он мог быть удален. Или у Вас нет прав. Обратитесь к администратору.".
+        // Step 9 - Удаляем документ, проверяем текстовое сообщение "Документ был удален.".
+        actionPanelHelper.deleteDoc();
+        bannerHelper.checkBannerDocWasDeleted();
 
         // Step 10 - Проверяем, что документ удален.
+        blackBarHelper.clickOnKsed();
+        blockMyJobHelper.openBlockMyJob();
+        blockMyJobHelper.node_SelectNode("Созданные мной документы");
+        blockMyJobHelper.node_SelectSubnode_project("Проекты");
+        blockMyJobHelper.checkdeletedDoc(docNumber, "Проект");
 
-        Selenide.sleep(5000);
+        Selenide.sleep(5000); // Для просмора итога
     }
 }
