@@ -5,45 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbc6da9b-70ef-432e-84ff-ffec843d19d8" name="Changes" comment="new string Awaitility">
-      <change afterPath="$PROJECT_DIR$/allure-results/1921c4f9-0729-4222-aa79-9e891c552182-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/23edbe4e-70d5-467a-9213-54eb722819c8-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/250ddfd3-2c73-41a8-a4d3-beaf7633d32a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/27778d00-8bcf-4fa4-a71b-6fc1a79ddfa3-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/28b1988c-2fee-4d11-a8f3-28692bf12663-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/2f01b4bd-b853-4ea6-9749-7b6187fc1df5-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/32a56584-c5b3-408e-b4a8-b392fc0a3148-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/3f34d28e-bbed-4ed0-9bca-133f45a34dfe-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/41adc531-dcdd-422f-bfc9-58fa01f81165-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/5c7bbb86-1161-4c8c-b707-e55c327f4bb6-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/5ee5ca6d-c248-4ac6-b188-adbbffddb382-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/62e867d5-e9c1-4eab-9f3c-a2e727cbd2ad-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/7e1c9eb8-7449-45d0-878a-755afb204592-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/807cda3e-aed5-4b6c-8b85-f1836ce9d144-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/9889f215-dcd6-4775-86e6-80cfd5288b5c-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/a39a3ddd-ce9a-4c32-a4b5-cc6341ea47b8-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/ab614c9a-bc57-4cdc-a000-e248341cc87e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/b00c466b-37c4-40fa-90b0-4dd6ae4ec112-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/b43e3ff9-f487-4c16-8a6c-d5a4badb2c50-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/c3c72666-7ea7-4cea-8d40-de6a1da53cc8-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/d03a7049-10e5-49ab-994e-6f244c2a4b6a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/d2f5aa31-1a83-4242-9829-7c3954905385-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/d76e9726-73a7-4c18-ae84-91b2715e7543-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/e4e45db9-0aa5-4b0c-b717-ac72d35be428-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/f9c093c4-5dd1-4c24-b845-c800b4b2f554-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helper/BlockMyJobHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Page/BlockMyJobPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/ApprovalRouteHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/ApprovalRouteHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/AuthHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/AuthHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/CategoryDocHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/CategoryDocHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/CreationDocHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/CreationDocHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/FormEditDocHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/FormEditDocHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/MainHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/MainHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Page/CategoryDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/CategoryDocPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Page/CreationFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/CreationDocPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Page/FormEditDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/FormEditDocPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Page/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StartTest/KS/C_1_001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StartTest/KS/C_1_001.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,42 +55,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.ErrandTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.KSEDtest [org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.KSEDtest [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG.ApprovalCard.startTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ApprovalCard.startTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.AuthorizationCase.authorization.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.CS001.testRun.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.C_1_001.startTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.C_1_001.startTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.CreateDocCase.authorization.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrandCard.startTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrandTest.errand.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StartTest.errand.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StartTest.startTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin-PC/IdeaProjects/KSED&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Admin-PC/IdeaProjects/KSED/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ErrandTest.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Maven.KSEDtest [org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test].executor": "Run",
+    "Maven.KSEDtest [verify].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.ApprovalCard.startTest (1).executor": "Run",
+    "TestNG.ApprovalCard.startTest.executor": "Run",
+    "TestNG.AuthorizationCase.authorization.executor": "Run",
+    "TestNG.CS001.testRun.executor": "Run",
+    "TestNG.C_1_001.startTest (1).executor": "Run",
+    "TestNG.C_1_001.startTest.executor": "Run",
+    "TestNG.CreateDocCase.authorization.executor": "Run",
+    "TestNG.ErrandCard.startTest.executor": "Run",
+    "TestNG.ErrandTest.errand.executor": "Run",
+    "TestNG.StartTest.errand.executor": "Run",
+    "TestNG.StartTest.startTest.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin-PC/Desktop/MenshikhIA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Admin-PC/IdeaProjects/KSED/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin-PC\IdeaProjects\KSED" />
