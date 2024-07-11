@@ -132,11 +132,14 @@
                 <version>2.22.0</version>
                 <configuration>
                     <parallel>classes</parallel>
-                    <threadCount>2</threadCount>
+                    <threadCount>1</threadCount>
                     <argLine>
                         -Dfile.encoding=UTF-8
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${project.basedir}/src/Suitfiles/regressOrder.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                     <trimStackTrace>false</trimStackTrace>
                 </configuration>
             </plugin>
