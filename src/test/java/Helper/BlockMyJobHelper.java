@@ -56,12 +56,17 @@ public class BlockMyJobHelper {
     @Step("Операция по проверке нужного документа в узле.")
     public void CheckAndOpenTheDocForEditing(String docNumber, String docStatus) {
         boolean docFound = false;
+        int retrais = 10;
         do {
+            mainPage.getModalWindowLoading().shouldNotBe(visible);
             blockMyJobPage.getFieldSearchDoc().setValue(docNumber).press(ENTER);
-            Selenide.sleep(1500);
+            Selenide.sleep(3000);
             mainPage.getModalWindowLoading().shouldNotBe(visible);
             if (blockMyJobPage.getDocByNumAndStatus(docStatus, docNumber).exists()) {
                 docFound = true;
+            } else retrais--;
+            if(retrais == 0){
+                throw new RuntimeException("Документ не появился в таблице.");
             }
         } while (!docFound);
         blockMyJobPage.getDocByNumAndStatus(docStatus, docNumber).hover();
@@ -70,19 +75,17 @@ public class BlockMyJobHelper {
     }
 
     @Step("Операция по проверке удаленного документа в узле.")
-    public void checkdeletedDoc(String docNumber, String docStatus) {
-        boolean docFound = false;
-        int retries = 2;
-        do {
+    public void checkDeletedDoc(String docNumber, String docStatus) {
+        mainPage.getModalWindowLoading().shouldNotBe(visible);
+        blockMyJobPage.getFieldSearchDoc().setValue(docNumber).press(ENTER);
+        mainPage.getModalWindowLoading().shouldNotBe(visible);
+        if (!blockMyJobPage.getDocByNumAndStatus(docStatus, docNumber).exists()) {
+            return;
+        } else {
             blockMyJobPage.getFieldSearchDoc().setValue(docNumber).press(ENTER);
-            Selenide.sleep(1500);
-            mainPage.getModalWindowLoading().shouldNotBe(visible);
-            if (blockMyJobPage.getDocByNumAndStatus(docStatus, docNumber).exists()) {
-                docFound = true;
-            } else retries--;
-            if (retries == 0) {
+            if (!blockMyJobPage.getDocByNumAndStatus(docStatus, docNumber).exists()) {
                 return;
             }
-        } while (!docFound);
+        }
     }
 }

@@ -47,6 +47,7 @@ public class C_1_001 extends BaseTest {
         // blockMyJobHelper.node_CheckAtributeNode("Фильтры", "Действия с выбранными", "Столбцы");
         //
 
+
         // Step 1 - Негативная авторизация; Авторизация под пользователем; Деавторизация и повторная авторизация.
         authHelper.authorization(Users.iniciator_ACard);
 
@@ -91,8 +92,8 @@ public class C_1_001 extends BaseTest {
         blockMyJobHelper.openBlockMyJob();
         blockMyJobHelper.node_SelectNode("Созданные мной документы");
         blockMyJobHelper.node_SelectSubnode_project("Проекты");
-        blockMyJobHelper.checkdeletedDoc(docNumber, "Проект");
+        blockMyJobHelper.checkDeletedDoc(docNumber, "Проект");
 
-        Selenide.sleep(5000); // Для просмора итога
+        Selenide.sleep(1000); // Для просмора итога
     }
 }
