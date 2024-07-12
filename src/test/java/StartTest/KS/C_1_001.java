@@ -36,6 +36,7 @@ public class C_1_001 extends BaseTest {
         // 4. Создание маршрута согласования с этапом. route - Индивидуальный; stage - Согласование КС
         // 5. Проверка узлов в блоке "Моя работа".
         // 6. Проверка атрибуты открытого узла\подузла.
+        // 7. Открыть узел, без подузлов.
         //
         // Методы по порядку из перечня:
         // authHelper.CheckNegativeLogIn(Users.negativeUser);
@@ -45,7 +46,7 @@ public class C_1_001 extends BaseTest {
         // approvalRouteHelper.createApprovalStage("Согласование КС");
         // blockMyJobHelper.checkNodeInTheBlockMyJob("Созданные мной документы", "Согласовать", "Исполнить поручения");
         // blockMyJobHelper.node_CheckAtributeNode("Фильтры", "Действия с выбранными", "Столбцы");
-        //
+        // blockMyJobHelper.node_SelectNode("Созданные мной документы");
 
 
         // Step 1 - Негативная авторизация; Авторизация под пользователем; Деавторизация и повторная авторизация.
@@ -69,7 +70,6 @@ public class C_1_001 extends BaseTest {
         // Step 5 - Выполняем переход на MainPage страницу. Открываем блок "Моя работа". Открываем узел. Открываем подузел.
         blackBarHelper.clickOnKsed();
         blockMyJobHelper.openBlockMyJob();
-        blockMyJobHelper.node_SelectNode("Созданные мной документы");
         blockMyJobHelper.node_SelectSubnode_project("Проекты");
 
         // Step 6 - открываем форму редактирования документа и проверяем, что открыта именно форма редактирования.
@@ -90,7 +90,6 @@ public class C_1_001 extends BaseTest {
         // Step 10 - Проверяем, что документ удален.
         blackBarHelper.clickOnKsed();
         blockMyJobHelper.openBlockMyJob();
-        blockMyJobHelper.node_SelectNode("Созданные мной документы");
         blockMyJobHelper.node_SelectSubnode_project("Проекты");
         blockMyJobHelper.checkDeletedDoc(docNumber, "Проект");
 
