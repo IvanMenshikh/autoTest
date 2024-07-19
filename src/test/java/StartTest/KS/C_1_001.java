@@ -77,7 +77,8 @@ public class C_1_001 extends BaseTest {
         formEditDocHelper.checkFormEdit("Акт");
 
         // Step 7 - Меняем категорию документа. Проверяем соответствие.
-        categoryDocHelper.deletedCategoryAndSelectedNew("ДВП");
+        categoryDocHelper.deletedCategory();
+        categoryDocHelper.docCategory("ДВП");
 
         // Step 8 - Сохранить изменения, проверяем категорию повторно.
         formEditDocHelper.saveChanges();

@@ -4,8 +4,6 @@ import Page.CategoryDocPage;
 import Page.CreationDocPage;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.visible;
-
 public class CategoryDocHelper {
 
     CategoryDocPage categoryDocPage = new CategoryDocPage();
@@ -18,12 +16,10 @@ public class CategoryDocHelper {
         categoryDocPage.getBtnOkCategory().click();
     }
 
-    @Step("Операция удаления выбранной категории и добавление другой.")
-    public void deletedCategoryAndSelectedNew(String category){
+    @Step("Операция удаления выбранной категории.")
+    public void deletedCategory(){
         categoryDocPage.getCategoryDoc().click();
         categoryDocPage.getDeleteSelectedEl().click();
-        categoryDocPage.getCategoryDoc_SelectCategory(category).click();
         categoryDocPage.getBtnOkCategory().click();
-        creationDocPage.getFieldDocCategory("ДВП").shouldBe(visible);
     }
 }
